@@ -93,7 +93,6 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ Neues Target x86 32-Bit — 2028
 - ⏳ Neues Target Raspberry — 2029
 
-
 ## Q9 Frame – Programm zum Darstellen des Q9-Flux-Framebuffers über Netzwerk
 
 - ✅ Übertragung: Videomodi, Reg-Info (6845), CLUT-Daten, Framebuffer (Dirty Area)
@@ -109,7 +108,6 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ Nearest-Neighbor-Skalierung im Referenzclient
 - ⏳ spätere Fenster- und Terminalintegration
 - ⏳ Client auf ESP32 mit kleinem LCD-Display
-
 
 ## Q9-Parsec – Parser-Generator
 
@@ -136,7 +134,7 @@ Bootstrap hat erfolgreich übersetzt, muss aber noch optimiert werden.
 - ✅ IR-Code definieren und dokumentieren
 - ✅ Frontend erzeugt IR-Zwischencode
 - ✅ Backend für 68k aus Intermediate Code, OS-9-kompatibel
-- 🔄 Backend für ARM (Mac Silicon)
+- 🔄 Backend für ARM64 (Apple Silicon)
 
 ### Phase 2
 
@@ -157,11 +155,9 @@ Bootstrap hat erfolgreich übersetzt, muss aber noch optimiert werden.
 - ⏳ Interpreter für Intermediate Code — 2028
 - ⏳ Weitere Backends, Raspberry
 
-
-
 ## Vinculum
 
-Eigene Hardware: CPU Motorola 68360, Ethernet Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
+Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
 
 ### Phase 1
 
@@ -169,4 +165,21 @@ Eigene Hardware: CPU Motorola 68360, Ethernet Netzwerk, 32 MByte RAM, Dual-CF-Dr
 - ⏳ PCB und Bauteile bestellen — 2028
 - ⏳ Erster Prototyp mit laufendem Q9 — 2028
 
-einen ersten öffentlichen Entwicklungsstand von Q9 Forge
+---
+
+## Aktueller Stand je Repo
+
+- ✅ **Q9-Flux**: bootet echtes Microware OS-9 (RBF/PCF-Descriptoren, Netzwerk, PMMU) — Mini-OS-Altlast entfernt (→ `Q9RESUME-Kernel`)
+- 🔄 **Q9-OS**: gerade erst angelegt, bisher nur das `mbr`-Tool
+- ✅ **Q9-Parsec**: ausführlich getestete Regressionssuite — offener Punkt: [#53](https://github.com/Q9-Forge/Q9-Parsec/issues/53)
+- 🔄 **Q9-QCC**: frisch aus Q9-Parsec extrahiert — eigenständige Testsuite fehlt noch (bisher nur über Q9-Parsecs `runtests.sh` mitgetestet)
+- ⏳ **Vinculum**: Repo noch nicht angelegt
+
+## Nächste Schritte
+
+- ⏳ Q9-Parsec#53 beheben (fünf fehlende Testgrammatik-Generierungsschritte)
+- ⏳ Q9-OS mit weiteren Tools füllen, sobald klar ist, was noch gebraucht wird
+- ⏳ Q9-QCC: eigene Regressionssuite, unabhängig von Q9-Parsecs `runtests.sh`
+- ⏳ Vinculum-Repo anlegen
+- ⏳ Q9-Flux: Emulator- und Hardware-Simulationsbereiche im Code klar trennen, dokumentieren, Tests/Buildvarianten vereinheitlichen, reproduzierbare Builds für alle Plattformen sicherstellen
+- ⏳ Q9 Frame: README/Quickstart, Lizenzen und Drittanbieter-Komponenten dokumentieren, Debugdaten/lokale Pfade entfernen, CI einrichten, Versions-/Release-Konvention festlegen — Vorbereitung für einen ersten öffentlichen Entwicklungsstand von Q9 Forge
