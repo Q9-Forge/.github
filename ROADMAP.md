@@ -15,6 +15,7 @@ Legende:
 | 🔄 | working, now aktiv in development |
 | ⏳ | in planing, tomorrow, next month or next century :-) |
 
+
 ## Q9-OS – Operating System
 
 Leichtes multitasking-, multiuser-, realtime-Operating-System. Es kann
@@ -44,6 +45,7 @@ Mögliche nächste Targets: Raspberry, x86 32-Bit, ESP32
 ### Phase 3
 
 - ⏳ Weitere Targets (Raspberry, x86, ...) — 2030 und später
+
 
 ## Q9-Flux – Emulator für Q9-OS (läuft auch mit anderen Systemen)
 
@@ -93,6 +95,7 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ Neues Target x86 32-Bit — 2028
 - ⏳ Neues Target Raspberry — 2029
 
+
 ## Q9 Frame – Programm zum Darstellen des Q9-Flux-Framebuffers über Netzwerk
 
 - ✅ Übertragung: Videomodi, Reg-Info (6845), CLUT-Daten, Framebuffer (Dirty Area)
@@ -109,6 +112,7 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ spätere Fenster- und Terminalintegration
 - ⏳ Client auf ESP32 mit kleinem LCD-Display
 
+
 ## Q9-Parsec – Parser-Generator
 
 Parser-Generator. Erstellt Vorlagen in C-Code für den rekursiven Abstieg.
@@ -120,6 +124,7 @@ wird so eine Vorlage verwendet.
 - ✅ Erstellt Parsertabelle zum Erstellen einer Stack-Maschine
 - ⏳ Möglichkeit, weitere Aktionen interaktiv hinzuzufügen, und
   halbautomatisierte Unterstützung für Parser- und Codeerzeugung
+
 
 ## Q9-QCC
 
@@ -155,6 +160,7 @@ Bootstrap hat erfolgreich übersetzt, muss aber noch optimiert werden.
 - ⏳ Interpreter für Intermediate Code — 2028
 - ⏳ Weitere Backends, Raspberry
 
+
 ## Vinculum
 
 Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
@@ -165,7 +171,7 @@ Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-
 - ⏳ PCB und Bauteile bestellen — 2028
 - ⏳ Erster Prototyp mit laufendem Q9 — 2028
 
----
+
 
 ## Aktueller Stand je Repo
 
@@ -174,6 +180,7 @@ Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-
 - ✅ **Q9-Parsec**: ausführlich getestete Regressionssuite — offener Punkt: [#53](https://github.com/Q9-Forge/Q9-Parsec/issues/53)
 - 🔄 **Q9-QCC**: frisch aus Q9-Parsec extrahiert — eigenständige Testsuite fehlt noch (bisher nur über Q9-Parsecs `runtests.sh` mitgetestet)
 - ⏳ **Vinculum**: Repo noch nicht angelegt
+
 
 ## Nächste Schritte
 
