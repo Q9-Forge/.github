@@ -172,11 +172,4 @@ Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-
 - ⏳ Erster Prototyp mit laufendem Q9 — 2028
 
 
-## Nächste Schritte
-
-- ⏳ Q9-Parsec#53 beheben (fünf fehlende Testgrammatik-Generierungsschritte)
-- ⏳ Q9-OS mit weiteren Tools füllen, sobald klar ist, was noch gebraucht wird
-- ⏳ Q9-QCC: eigene Regressionssuite, unabhängig von Q9-Parsecs `runtests.sh`
-- ⏳ Vinculum-Repo anlegen
-- ⏳ Q9-Flux: Emulator- und Hardware-Simulationsbereiche im Code klar trennen, dokumentieren, Tests/Buildvarianten vereinheitlichen, reproduzierbare Builds für alle Plattformen sicherstellen
-- ⏳ Q9 Frame: README/Quickstart, Lizenzen und Drittanbieter-Komponenten dokumentieren, Debugdaten/lokale Pfade entfernen, CI einrichten, Versions-/Release-Konvention festlegen — Vorbereitung für einen ersten öffentlichen Entwicklungsstand von Q9 Forge
+öffentlichen Entwicklungsstand von Q9 Forge
