@@ -172,36 +172,17 @@ Hardware: Motorola 68360, Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
 
 ## Aktueller Stand je Repo
 
-- **Q9-Flux**: aktiv, funktionsfähiger CB030-Emulator, bootet echtes
-  Microware OS-9 (RBF/PCF-Descriptoren, Netzwerk, PMMU). Frisch bereinigt um
-  die frühe, aufgegebene "eigenes Mini-OS"-Vision (→ `Q9RESUME-Kernel`).
-- **Q9-OS**: gerade erst angelegt, bisher nur das `mbr`-Tool. Rest des
-  Microware-OS-9-Ports steht noch aus.
-- **Q9-Parsec**: aktiv, ausführlich getestete Regressionssuite
-  (`runtests.sh`). Offener Punkt: [#53](https://github.com/Q9-Forge/Q9-Parsec/issues/53)
-  — fünf Testgrammatiken ohne automatischen Erzeugungsschritt.
-- **Q9-QCC**: frisch aus Q9-Parsec extrahiert. Umfangreicher Tiny-C-Compiler
-  mit 68000-/ARM64-Backends, siehe dortiges `docs/TEILPROJEKTE.md` für die
-  Sprachkern-Roadmap (Priorität P0: Stringkonstanten, Literale, `typedef`,
-  `enum`, `struct`, ...). Braucht noch eine eigenständige Testsuite (bisher
-  nur über Q9-Parsecs `runtests.sh` mitgetestet). Erster Bootstrap
-  übersetzt bereits erfolgreich, hat aber ein Speicherverbrauchsproblem im
-  Übersetzungssystem (16 MByte reichen kaum) — auf einem echten 68K-System
-  evtl. relevant, noch zu optimieren.
-- **Vinculum**: noch nicht angelegt, folgt mit KiCad-Daten und später einem
-  bereinigten (Microware-freien) Image.
+- ✅ **Q9-Flux**: bootet echtes Microware OS-9 (RBF/PCF-Descriptoren, Netzwerk, PMMU) — Mini-OS-Altlast entfernt (→ `Q9RESUME-Kernel`)
+- 🔄 **Q9-OS**: gerade erst angelegt, bisher nur das `mbr`-Tool
+- ✅ **Q9-Parsec**: ausführlich getestete Regressionssuite — offener Punkt: [#53](https://github.com/Q9-Forge/Q9-Parsec/issues/53)
+- 🔄 **Q9-QCC**: frisch aus Q9-Parsec extrahiert — eigenständige Testsuite fehlt noch (bisher nur über Q9-Parsecs `runtests.sh` mitgetestet)
+- ⏳ **Vinculum**: Repo noch nicht angelegt
 
-## Nächste Schritte (unsortiert, kein Commitment)
+## Nächste Schritte
 
-- Q9-Parsec#53 beheben (fünf fehlende Testgrammatik-Generierungsschritte)
-- Q9-OS mit weiteren Tools füllen, sobald klar ist, was noch gebraucht wird
-- Q9-QCC: eigene Regressionssuite, unabhängig von Q9-Parsecs `runtests.sh`
-- Vinculum-Repo anlegen, KiCad-Daten einpflegen
-- Q9-Forge-weites GitHub Project (Board) für repo-übergreifende Themen
-- Q9-Flux: Emulator- und Hardware-Simulationsbereiche im Code klar trennen,
-  dokumentieren, Tests/Buildvarianten vereinheitlichen, reproduzierbare
-  Builds für alle Plattformen sicherstellen
-- Q9 Frame: README/Quickstart, Lizenzen und Drittanbieter-Komponenten
-  dokumentieren, Debugdaten/lokale Pfade entfernen, CI einrichten,
-  Versions-/Release-Konvention festlegen — Vorbereitung für einen ersten
-  öffentlichen Entwicklungsstand von Q9 Forge
+- ⏳ Q9-Parsec#53 beheben (fünf fehlende Testgrammatik-Generierungsschritte)
+- ⏳ Q9-OS mit weiteren Tools füllen, sobald klar ist, was noch gebraucht wird
+- ⏳ Q9-QCC: eigene Regressionssuite, unabhängig von Q9-Parsecs `runtests.sh`
+- ⏳ Vinculum-Repo anlegen
+- ⏳ Q9-Flux: Emulator- und Hardware-Simulationsbereiche im Code klar trennen, dokumentieren, Tests/Buildvarianten vereinheitlichen, reproduzierbare Builds für alle Plattformen sicherstellen
+- ⏳ Q9 Frame: README/Quickstart, Lizenzen und Drittanbieter-Komponenten dokumentieren, Debugdaten/lokale Pfade entfernen, CI einrichten, Versions-/Release-Konvention festlegen — Vorbereitung für einen ersten öffentlichen Entwicklungsstand von Q9 Forge
