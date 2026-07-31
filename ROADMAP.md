@@ -172,16 +172,6 @@ Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-
 - ⏳ Erster Prototyp mit laufendem Q9 — 2028
 
 
-
-## Aktueller Stand je Repo
-
-- ✅ **Q9-Flux**: bootet echtes Microware OS-9 (RBF/PCF-Descriptoren, Netzwerk, PMMU) — Mini-OS-Altlast entfernt (→ `Q9RESUME-Kernel`)
-- 🔄 **Q9-OS**: gerade erst angelegt, bisher nur das `mbr`-Tool
-- ✅ **Q9-Parsec**: ausführlich getestete Regressionssuite — offener Punkt: [#53](https://github.com/Q9-Forge/Q9-Parsec/issues/53)
-- 🔄 **Q9-QCC**: frisch aus Q9-Parsec extrahiert — eigenständige Testsuite fehlt noch (bisher nur über Q9-Parsecs `runtests.sh` mitgetestet)
-- ⏳ **Vinculum**: Repo noch nicht angelegt
-
-
 ## Nächste Schritte
 
 - ⏳ Q9-Parsec#53 beheben (fünf fehlende Testgrammatik-Generierungsschritte)
