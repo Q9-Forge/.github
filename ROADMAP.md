@@ -5,15 +5,27 @@ Stand: 2026-07-31 (Tag der Repo-Reorganisation).
 # Detaillierte Phasenpläne (Andreas, Stand 2026-07-31)
 
 Die Reihenfolge orientiert sich an Abhängigkeiten und stabilen
-Zwischenständen, bewusst ohne feste Zeitangaben.
+Zwischenständen, bewusst nur mit ungefähren Zeitangaben.
 
+
+Legende:
 | Symbol | Bedeutung |
 |--------|-----------|
 | ✅ | ready, maybe with some issues |
 | 🔄 | working, now aktiv in development |
 | ⏳ | in planing, tomorrow, next month or next century :-) |
 
-## Q9-OS
+
+## Q9-OS    Operating System
+
+Leichtes multitasking, multiuser, realtime Operating System. Kann Microware OS-9/68k Module ausführen. 
+Läuft auf Minimalsystemem ohne Massenspeicher nur aus dem ROM. Bis hin zu Grafikfähigen größeren 
+Systemem mit Massenspeicher. Modularer Kernel, IO-System mit den Ringen Manager - Driver - Descriptoren. 
+TCP Stack. 
+
+First Target:  Motorola 68K
+Mögliche nächste Targets:  Raspberry, x86 32Bit, ESP 32
+
 
 ### Phase 1
 
@@ -21,26 +33,74 @@ Zwischenständen, bewusst ohne feste Zeitangaben.
 - ⏳ Kernel-Planung, welche Teilmodule wir brauchen — 2027
 - ⏳ Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode — 2027
 - ⏳ Kernel neu schreiben in C — 2027
+
+### Phase 2
+
 - ⏳ Systemmodule bauen — 2027/28
 - ⏳ Manager bauen, untersuchen und planen — 2028
+- ⏳ Kernelsupport für CP/M68k    2028
+- ⏳ Kernelsupport für OS-9 6809  2029
+- ⏳ Kernelsupport für CP/M 80    2030 :-)
 
-## Q9-Flux
+### Phase 3
+
+- ⏳ Next Targets, Raspberry, x86 ...  2030 above
+
+
+## Q9-Flux  Emulator für Q9 OS  (läuft auch mit anderen Systemen)
+
+Für Motorola 68K Zielsystem, läuft auf Mac (Silicon), Linux, Windows und später auch WASM.
+System für Hardware Devices, Board kann konfiguriert werden. Freies Memory Mapping.
 
 ### Phase 1
 
 - ✅ Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows
-- ✅ Port für OS-9/68k als 68030-CPU
+- ✅ Original Bootimage kann verwendet werden, frei einstellbar.
+- ✅ Ethernet Support, 3 Modi: Nat, VMnet, Bridge
 - ✅ Telnet-Support in OS-9
+- 🔄 FTP Support, Issue (ftp use old TCP Socket)
+- 🔄 NFS Support, Issue
+- 🔄 Samba Summport, Issue
+- ✅ Linux Bash Support V1.10.12
 - Hardware-Simulationen:
-  - ✅ CF-Kartenleser (CompactFlash, RBF/PCF)
-  - ✅ UART-Simulator (68681 DUART)
-  - ✅ RTC-Simulator (RTC72421)
-  - ✅ Timer-/Clock-Simulator (IRQ3)
-  - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8)
-  - ✅ Ethernet-Simulation (QUICC)
-  - 🔄 Framebuffer mit Remote-Support (Q9 Frame) — Aug 2026, Details siehe unten
+    - ✅ CF-Kartenleser, CompactFlash
+        - ✅ Grundfunktionen
+        - ✅ Partition Support, using MBR Record
+        - 🔄 RBF/PCF Support, Nov 2026
+        - 🔄 Master/Slave Support, Okt 2026
+    - ✅ UART-Simulator (68681 DUART)
+    - ✅ RTC-Simulator (RTC72421)
+    - ✅ Timer-/Clock-Simulator (IRQ3)
+    - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8)
+    - ✅ Ethernet-Simulation (QUICC)
+    - 🔄 M6845 Framebuffer Simulation. mit Remote Connection (Q9 Frame) — Aug 2026
+      Als Gegenstück Q9 Frame Projekt, Stellt den Framebuffer in einem Fesnter dar (für Mac)
 
-#### Q9 Frame (Framebuffer-über-Netzwerk)
+### Phase 2
+
+- Virtuelle-Simulationen, geschwindigkeits optimiert
+   - ⏳ Massenspeicher, vietuell, optimiert
+   - ⏳ UART-Simulator, virtuell, optimiert
+   - ⏳ RTC-Simulator, virtuell, optimiert
+   - ⏳ Timer-/Clock, virtuell optimiert
+- ⏳ Board Config Konfigurator, Zusammenstellung der Simulationen für ein Board, Q1 2027
+- ⏳ Hardware Simulation für verschiedene Hardware, cb030, mc68000, vinculum und weitere 2028
+    
+## Q9 Frame    Programm zum datstellen des Q9 Flux Framebuffers, über Netzwerk
+- ✅ Übertragung, Videomodi, Reg-Info (6845), Clut Data, Framefuffer (dirty area)
+- ✅ volle MC6845-Registermodell unterstützung, dynamische Auflösung, on the Run umstallbar
+- ✅ VideoModi und DAC Modelle, von Monochromen 1-Bit-24-Bit Vollfarbmodus, on the Run umschaltbar
+- ✅ Abfrage des UDP HELLO Protokoll zum automatischen finden des Servers.
+- ✅ Screenshot
+- ⏳ Mehrere Clients gleichzeitig.
+- ⏳ Optionaler UDP Transport.
+- ⏳ Maus und Tastatur Rückkanal. Cuesor und Mauszeiger.
+- ⏳ Verbindungsmanager 
+- ⏳ spätere Fenster- und Terminalintegration
+- ⏳ Client auf ESP-32 miz kleinen LCD Display
+
+========================================================================================================
+
 
 ##### Phase 1 – Projektbasis ordnen
 
@@ -57,14 +117,6 @@ Zwischenständen, bewusst ohne feste Zeitangaben.
 - bestehende Tests und Buildvarianten vereinheitlichen
 - reproduzierbare Builds für die unterstützten Plattformen sicherstellen
 
-##### Phase 3 – Q9 Frame v1
-
-- separates Video-RAM bei `0xFD000000` anbinden
-- MC6845-Registermodell ab `0xFFFFA000` integrieren
-- monochromen 1-Bit-Framebuffer implementieren
-- Bit- und Byte-Layout festlegen und testen
-- Dirty-Tracking bei VRAM-Schreibzugriffen umsetzen
-
 ##### Phase 4 – Host-Service-Manager
 
 - gemeinsamen nicht-blockierenden Service-Rahmen bereitstellen
@@ -72,21 +124,12 @@ Zwischenständen, bewusst ohne feste Zeitangaben.
 - Q9-Frame-TCP-Service ergänzen
 - Updatefrequenz, Sendewarteschlangen und Client-Lebenszyklus implementieren
 
-##### Phase 5 – Q9 Frame Netzwerk v1
-
-- `HELLO` und `VIDEO_INFO`
-- `FRAME_FULL` und `FRAME_UPDATE`
-- Vollbildanforderung und Resynchronisierung
-- UDP-Discovery im lokalen Netz
-- Protokoll- und Verbindungstests
-
 ##### Phase 6 – Test-Clients
 
 - kleiner Desktop-Referenzclient
 - Nearest-Neighbor-Skalierung
 - Fenster-, Vollbild- und Minimierungsverhalten
 - Test mit verschiedenen Updatefrequenzen und langsamen Clients
-- später ESP32-Client mit kleinem Display
 
 ##### Phase 7 – Öffentliche Veröffentlichung
 
@@ -98,14 +141,6 @@ Zwischenständen, bewusst ohne feste Zeitangaben.
 - erster öffentlicher Entwicklungsstand von Q9 Forge
 
 ##### Phase 8 – Erweiterungen
-
-- Farbmodi und virtuelle DAC-Modelle
-- mehrere gleichzeitige Video-Clients
-- optionaler UDP-Transport für Video-Updates
-- Tastatur- und Mauskanal
-- konfigurierbare Pixel- und Speicherformate
-- weitergehende MC6845-Timing- und Cursorfunktionen
-- spätere Fenster- und Terminalintegration
 
 ### Phase 2
 
