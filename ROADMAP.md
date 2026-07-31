@@ -7,29 +7,28 @@ Stand: 2026-07-31 (Tag der Repo-Reorganisation).
 Die Reihenfolge orientiert sich an Abhängigkeiten und stabilen
 Zwischenständen, bewusst nur mit ungefähren Zeitangaben.
 
-
 Legende:
+
 | Symbol | Bedeutung |
 |--------|-----------|
 | ✅ | ready, maybe with some issues |
 | 🔄 | working, now aktiv in development |
 | ⏳ | in planing, tomorrow, next month or next century :-) |
 
+## Q9-OS – Operating System
 
-## Q9-OS    Operating System
+Leichtes multitasking-, multiuser-, realtime-Operating-System. Es kann
+Microware-OS-9/68k-Module ausführen. Läuft auf Minimalsystemen ohne
+Massenspeicher, nur aus dem ROM, bis hin zu grafikfähigen größeren Systemen
+mit Massenspeicher. Modularer Kernel, IO-System mit den Schichten Manager –
+Driver – Descriptoren. TCP-Stack.
 
-Leichtes multitasking, multiuser, realtime Operating System. Kann Microware OS-9/68k Module ausführen. 
-Läuft auf Minimalsystemem ohne Massenspeicher nur aus dem ROM. Bis hin zu Grafikfähigen größeren 
-Systemem mit Massenspeicher. Modularer Kernel, IO-System mit den Ringen Manager - Driver - Descriptoren. 
-TCP Stack. 
-
-First Target:  Motorola 68K
-Mögliche nächste Targets:  Raspberry, x86 32Bit, ESP 32
-
+Erstes Target: Motorola 68K
+Mögliche nächste Targets: Raspberry, x86 32-Bit, ESP32
 
 ### Phase 1
 
-- 🔄 Kernel reengeneers, Disassembly — Dez 2026
+- 🔄 Kernel Reverse Engineering, Disassembly — Dez 2026
 - ⏳ Kernel-Planung, welche Teilmodule wir brauchen — 2027
 - ⏳ Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode — 2027
 - ⏳ Kernel neu schreiben in C — 2027
@@ -38,121 +37,77 @@ Mögliche nächste Targets:  Raspberry, x86 32Bit, ESP 32
 
 - ⏳ Systemmodule bauen — 2027/28
 - ⏳ Manager bauen, untersuchen und planen — 2028
-- ⏳ Kernelsupport für CP/M68k    2028
-- ⏳ Kernelsupport für OS-9 6809  2029
-- ⏳ Kernelsupport für CP/M 80    2030 :-)
+- ⏳ Kernelsupport für CP/M-68k — 2028
+- ⏳ Kernelsupport für OS-9/6809 — 2029
+- ⏳ Kernelsupport für CP/M-80 — 2030 :-)
 
 ### Phase 3
 
-- ⏳ Next Targets, Raspberry, x86 ...  2030 above
+- ⏳ Weitere Targets (Raspberry, x86, ...) — 2030 und später
 
+## Q9-Flux – Emulator für Q9-OS (läuft auch mit anderen Systemen)
 
-## Q9-Flux  Emulator für Q9 OS  (läuft auch mit anderen Systemen)
-
-Für Motorola 68K Zielsystem, läuft auf Mac (Silicon), Linux, Windows und später auch WASM.
-System für Hardware Devices, Board kann konfiguriert werden. Freies Memory Mapping.
+Für das Motorola-68K-Zielsystem, läuft auf Mac (Apple Silicon), Linux,
+Windows und später auch WASM. System für Hardware-Devices, Board frei
+konfigurierbar, freies Memory-Mapping.
 
 ### Phase 1
 
 - ✅ Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows
-- ✅ Original Bootimage kann verwendet werden, frei einstellbar.
-- ✅ Ethernet Support, 3 Modi: Nat, VMnet, Bridge
+- ✅ Original-Bootimage kann verwendet werden, frei einstellbar
+- ✅ Ethernet-Support, 3 Modi: NAT, VMnet, Bridge
 - ✅ Telnet-Support in OS-9
-- 🔄 FTP Support, Issue (ftp use old TCP Socket)
-- 🔄 NFS Support, Issue
-- 🔄 Samba Summport, Issue
-- ✅ Linux Bash Support V1.10.12
+- 🔄 FTP-Support, Issue (FTP nutzt noch den alten TCP-Socket-Pfad)
+- 🔄 NFS-Support, Issue
+- 🔄 Samba-Support, Issue
+- ✅ Linux-Bash-Support V1.10.12
 - Hardware-Simulationen:
-    - ✅ CF-Kartenleser, CompactFlash
-        - ✅ Grundfunktionen
-        - ✅ Partition Support, using MBR Record
-        - 🔄 RBF/PCF Support, Nov 2026
-        - 🔄 Master/Slave Support, Okt 2026
-    - ✅ UART-Simulator (68681 DUART)
-    - ✅ RTC-Simulator (RTC72421)
-    - ✅ Timer-/Clock-Simulator (IRQ3)
-    - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8)
-    - ✅ Ethernet-Simulation (QUICC)
-    - 🔄 M6845 Framebuffer Simulation. mit Remote Connection (Q9 Frame) — Aug 2026
-      Als Gegenstück Q9 Frame Projekt, Stellt den Framebuffer in einem Fesnter dar (für Mac)
+  - ✅ CF-Kartenleser (CompactFlash)
+    - ✅ Grundfunktionen
+    - ✅ Partition-Support über MBR-Record
+    - 🔄 RBF-/PCF-Support — Nov 2026
+    - 🔄 Master-/Slave-Support — Okt 2026
+  - ✅ UART-Simulator (68681 DUART)
+  - ✅ RTC-Simulator (RTC72421)
+  - ✅ Timer-/Clock-Simulator (IRQ3)
+  - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8)
+  - ✅ Ethernet-Simulation (QUICC)
+  - 🔄 MC6845-Framebuffer-Simulation mit Remote-Verbindung (Q9 Frame) — Aug 2026
+    Gegenstück-Projekt Q9 Frame stellt den Framebuffer in einem Fenster dar (für Mac)
 
 ### Phase 2
 
-- Virtuelle-Simulationen, geschwindigkeits optimiert
-   - ⏳ Massenspeicher, vietuell, optimiert
-   - ⏳ UART-Simulator, virtuell, optimiert
-   - ⏳ RTC-Simulator, virtuell, optimiert
-   - ⏳ Timer-/Clock, virtuell optimiert
-- ⏳ Board Config Konfigurator, Zusammenstellung der Simulationen für ein Board, Q1 2027
-- ⏳ Hardware Simulation für verschiedene Hardware, cb030, mc68000, vinculum und weitere 2028
-    
-## Q9 Frame    Programm zum datstellen des Q9 Flux Framebuffers, über Netzwerk
-- ✅ Übertragung, Videomodi, Reg-Info (6845), Clut Data, Framefuffer (dirty area)
-- ✅ volle MC6845-Registermodell unterstützung, dynamische Auflösung, on the Run umstallbar
-- ✅ VideoModi und DAC Modelle, von Monochromen 1-Bit-24-Bit Vollfarbmodus, on the Run umschaltbar
-- ✅ Abfrage des UDP HELLO Protokoll zum automatischen finden des Servers.
-- ✅ Screenshot
-- ⏳ Mehrere Clients gleichzeitig.
-- ⏳ Optionaler UDP Transport.
-- ⏳ Maus und Tastatur Rückkanal. Cuesor und Mauszeiger.
-- ⏳ Verbindungsmanager 
-- ⏳ spätere Fenster- und Terminalintegration
-- ⏳ Client auf ESP-32 miz kleinen LCD Display
-
-========================================================================================================
-
-
-##### Phase 1 – Projektbasis ordnen
-
-- Q9 Forge als übergeordnete Struktur etablieren
-- Q9-Flux und Q9 Frame sauber einordnen
-- bestehende Projekte und Buildpfade inventarisieren
-- gemeinsame Namenskonventionen und Dokumentationsstruktur festlegen
-- öffentliche Repository-Struktur vorbereiten
-
-##### Phase 2 – Q9-Flux stabilisieren
-
-- Emulator- und Hardware-Simulationsbereiche klar trennen
-- Speicher-, I/O- und Geräteabbild dokumentieren
-- bestehende Tests und Buildvarianten vereinheitlichen
-- reproduzierbare Builds für die unterstützten Plattformen sicherstellen
-
-##### Phase 4 – Host-Service-Manager
-
-- gemeinsamen nicht-blockierenden Service-Rahmen bereitstellen
-- bestehenden Terminal-Service einbinden
-- Q9-Frame-TCP-Service ergänzen
-- Updatefrequenz, Sendewarteschlangen und Client-Lebenszyklus implementieren
-
-##### Phase 6 – Test-Clients
-
-- kleiner Desktop-Referenzclient
-- Nearest-Neighbor-Skalierung
-- Fenster-, Vollbild- und Minimierungsverhalten
-- Test mit verschiedenen Updatefrequenzen und langsamen Clients
-
-##### Phase 7 – Öffentliche Veröffentlichung
-
-- README und Quickstart vervollständigen
-- Lizenzen und Drittanbieter-Komponenten dokumentieren
-- Debugdaten, lokale Pfade und private Konfigurationen entfernen
-- CI, Tests und reproduzierbare Builds einrichten
-- Versions- und Release-Konvention festlegen
-- erster öffentlicher Entwicklungsstand von Q9 Forge
-
-##### Phase 8 – Erweiterungen
-
-### Phase 2
-
-- ⏳ Neues, schnelles virtuelles Hardware-Target für Q9-Flux — 2027
+- Virtuelle Simulationen, geschwindigkeitsoptimiert:
+  - ⏳ Massenspeicher, virtuell, optimiert
+  - ⏳ UART-Simulator, virtuell, optimiert
+  - ⏳ RTC-Simulator, virtuell, optimiert
+  - ⏳ Timer/Clock, virtuell, optimiert
+- ⏳ Board-Konfigurator: Zusammenstellung der Simulationen für ein Board — Q1 2027
 - ⏳ Neues Target-Hardware MC68000 — 2027
 - ⏳ Interner 6809-Emulator — 2027
 - ⏳ Interne CP/M-68k-Emulation — 2027
+- ⏳ Hardware-Simulation für verschiedene Boards (CB030, MC68000, Vinculum, weitere) — 2028
 
 ### Phase 3
 
 - ⏳ Neues Target x86 32-Bit — 2028
 - ⏳ Neues Target Raspberry — 2029
+
+## Q9 Frame – Programm zum Darstellen des Q9-Flux-Framebuffers über Netzwerk
+
+- ✅ Übertragung: Videomodi, Reg-Info (6845), CLUT-Daten, Framebuffer (Dirty Area)
+- ✅ Volle Unterstützung des MC6845-Registermodells, dynamische Auflösung, on the run umstellbar
+- ✅ Videomodi und DAC-Modelle, von monochromem 1-Bit bis 24-Bit-Vollfarbmodus, on the run umschaltbar
+- ✅ UDP-HELLO-Protokoll zum automatischen Finden des Servers
+- ✅ Screenshot
+- ⏳ Host-Service-Manager: gemeinsamer, nicht-blockierender Service-Rahmen für Terminal- und Q9-Frame-TCP-Service, inkl. Update-Frequenz, Sendewarteschlangen und Client-Lebenszyklus
+- ⏳ Mehrere Clients gleichzeitig
+- ⏳ Optionaler UDP-Transport
+- ⏳ Maus- und Tastatur-Rückkanal (Cursor und Mauszeiger)
+- ⏳ Verbindungsmanager
+- ⏳ Nearest-Neighbor-Skalierung im Referenzclient
+- ⏳ spätere Fenster- und Terminalintegration
+- ⏳ Client auf ESP32 mit kleinem LCD-Display
 
 ## Q9-QCC
 
@@ -211,3 +166,10 @@ Hardware: Motorola 68360, Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
 - Q9-QCC: eigene Regressionssuite, unabhängig von Q9-Parsecs `runtests.sh`
 - Vinculum-Repo anlegen, KiCad-Daten einpflegen
 - Q9-Forge-weites GitHub Project (Board) für repo-übergreifende Themen
+- Q9-Flux: Emulator- und Hardware-Simulationsbereiche im Code klar trennen,
+  dokumentieren, Tests/Buildvarianten vereinheitlichen, reproduzierbare
+  Builds für alle Plattformen sicherstellen
+- Q9 Frame: README/Quickstart, Lizenzen und Drittanbieter-Komponenten
+  dokumentieren, Debugdaten/lokale Pfade entfernen, CI einrichten,
+  Versions-/Release-Konvention festlegen — Vorbereitung für einen ersten
+  öffentlichen Entwicklungsstand von Q9 Forge
