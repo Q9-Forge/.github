@@ -111,42 +111,48 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ Client auf ESP32 mit kleinem LCD-Display
 
 
-## Q9-Parsec    Parse Generator  
+## Q9-Parsec – Parser-Generator
 
-Parsergenerator. Erstellt vorlagen in C-Code für den Recursiven abstieg. Als Eingabe wird eine 
-EBNF Spachdefinition erwartet. Erstellt werden Vorlagen zum erstellen von Parser und Codeerzeugung.
-Auch beim QCC wird so eine Vorlage verwendet.
+Parser-Generator. Erstellt Vorlagen in C-Code für den rekursiven Abstieg.
+Als Eingabe wird eine EBNF-Sprachdefinition erwartet. Erstellt werden
+Vorlagen zum Erstellen von Parsern und zur Codeerzeugung. Auch bei Q9-QCC
+wird so eine Vorlage verwendet.
 
 - ✅ EBNF-Parser, rekursiver Top-Down-Parser (erste Version)
-- ✅ Erstellt Parsertablle zum erstellen einer Stackmaschine.
-- ⏳ Möglichkeit um weitere Aktionen interaktiv hinzuzufügen und halbautomatisiert Parser und Codeerzeugung zu unterstützen. 
-
+- ✅ Erstellt Parsertabelle zum Erstellen einer Stack-Maschine
+- ⏳ Möglichkeit, weitere Aktionen interaktiv hinzuzufügen, und
+  halbautomatisierte Unterstützung für Parser- und Codeerzeugung
 
 ## Q9-QCC
 
-C-Compiler für Q9 / OS-9/68K. Bei den ersten Versuchen gab es große Problem mit Speichervebrauch im Übersetzungssysten. 
-16 MByte reichen kaum zum Übersetzen. Auf einem 68K System evtl. ein Problem. Erster Bootstrap hat übersetzt, 
-muss aber noch optimiert werden,
+C-Compiler für Q9/OS-9/68K. Bei den ersten Versuchen gab es große Probleme
+mit dem Speicherverbrauch im Übersetzungssystem – 16 MByte reichen kaum
+zum Übersetzen, auf einem echten 68K-System evtl. ein Problem. Erster
+Bootstrap hat erfolgreich übersetzt, muss aber noch optimiert werden.
+
+### Phase 1
+
+- ✅ Aus Q9-Parsec-Ausgabe Lexer, Syntaxcheck erzeugen
+- ✅ IR-Code definieren und dokumentieren
+- ✅ Frontend erzeugt IR-Zwischencode
+- ✅ Backend für 68k aus Intermediate Code, OS-9-kompatibel
 
 ### Phase 2
-- ✅ Aus Q9-Parsec Ausgabe Lexer, Syntaxchack erzeugen
-- ✅ IR Coder definieren und Dokumentieren.
-- ✅ Frantend erzeugt IR Zwischencode
-- ✅ Backend für 68k aus Intermediate Code, OS-9 compatibel
 
-### Phase 2
-- ⏳ C-Preprocessor, ISO C89 / C99 /C16 compatibel
-- ⏳ Assembler 68k, OS-9 Format, Ausgabe ROF Format 
-- ⏳ Linker für ROF Format, Ausgabe OS-9/Q9 Modul
-- ⏳ Weitere Backends, X86 32Bit
+- ⏳ C-Präprozessor, ISO-C89-/C99-/C11-kompatibel
+- ⏳ Assembler für 68k, OS-9-Format, Ausgabe ROF-Format
+- ⏳ Linker für ROF-Format, Ausgabe OS-9/Q9-Modul
+- ⏳ Weitere Backends, x86 32-Bit
 
-### Phase 3  
-- ⏳ QCC Aufrufmanager, rufr QCC Module zum compileren auf 2027 
-- ⏳ Optimierungen im IR Twischencode 2027
-- ⏳ Optimierungen im Assembler Code 2027
+### Phase 3
+
+- ⏳ QCC-Aufrufmanager, ruft QCC-Module zum Kompilieren auf — 2027
+- ⏳ Optimierungen im IR-Zwischencode — 2027
+- ⏳ Optimierungen im Assembler-Code — 2027
 
 ### Phase 4
-- ⏳ Weitere Frontends, Rust, go, PASCAL, Oberon — 2029
+
+- ⏳ Weitere Frontends: Rust, Go, Pascal, Oberon — 2029
 - ⏳ Interpreter für Intermediate Code — 2028
 - ⏳ Weitere Backends, Raspberry
 
@@ -178,7 +184,10 @@ Hardware: Motorola 68360, Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
   mit 68000-/ARM64-Backends, siehe dortiges `docs/TEILPROJEKTE.md` für die
   Sprachkern-Roadmap (Priorität P0: Stringkonstanten, Literale, `typedef`,
   `enum`, `struct`, ...). Braucht noch eine eigenständige Testsuite (bisher
-  nur über Q9-Parsecs `runtests.sh` mitgetestet).
+  nur über Q9-Parsecs `runtests.sh` mitgetestet). Erster Bootstrap
+  übersetzt bereits erfolgreich, hat aber ein Speicherverbrauchsproblem im
+  Übersetzungssystem (16 MByte reichen kaum) — auf einem echten 68K-System
+  evtl. relevant, noch zu optimieren.
 - **Vinculum**: noch nicht angelegt, folgt mit KiCad-Daten und später einem
   bereinigten (Microware-freien) Image.
 
