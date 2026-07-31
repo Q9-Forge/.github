@@ -35,83 +35,104 @@ Stand: 2026-07-31 (Tag der Repo-Reorganisation).
 Die Reihenfolge orientiert sich an Abhängigkeiten und stabilen
 Zwischenständen, bewusst ohne feste Zeitangaben.
 
-Legende:
-```
-v    ready, maybe with some issues
--    working, now aktiv in development
-x    in planing, tomorrow, next month or next century :-)
-```
+| Symbol | Bedeutung |
+|--------|-----------|
+| ✅ | ready, maybe with some issues |
+| 🔄 | working, now aktiv in development |
+| ⏳ | in planing, tomorrow, next month or next century :-) |
 
-## Q9 OS
+## Q9-OS
 
-- Phase 1
-    - Kernel reengeneers, Diasassembly                   - Dez 2026
-    - Kernel planung, welche Teilmodule brauchen wir     x 2027
-    - Kernel erste übersetzung eines vorhandenen         x 2027
-      Kernels mit originalen Code
-    - Kernel neu schreiben in C-Code                     x 2027
-    - Systemmodule bauen                                 x 2027/28
-    - Manager bauen, untersuchen und planen              x 2028
+**Phase 1**
 
-## Q9 Flex Emulator
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| Kernel reengeneers, Disassembly | 🔄 | Dez 2026 |
+| Kernel-Planung, welche Teilmodule wir brauchen | ⏳ | 2027 |
+| Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode | ⏳ | 2027 |
+| Kernel neu schreiben in C | ⏳ | 2027 |
+| Systemmodule bauen | ⏳ | 2027/28 |
+| Manager bauen, untersuchen und planen | ⏳ | 2028 |
 
-- Phase 1
-    - Emulator für Motorola 68K (Mushaki Basis)           v
-      running on Mac, Linux, Windows
-    - add hard Simulation for real or virtuel Hardware    v
-    - add Port for OS-9/68k as 68030 CPU                  v
-    - add virtual Network Terminal Simulatoren            v
-    - add network Support as Ethernet Simulation          v
-    - add telnet support in OS-9                          v
-    - add Framebuffer Support  with remote Support        - Aug 2026
+## Q9-Flux (Emulator)
 
-- Phase 2
-    - add new virtual fast Hardware Target for Q9 Flex    x 2027
-    - add new Target Hardware mc68000                     x 2027
-    - add intern emulator 6809                            x 2027
-    - add intern CP/M-68k Emulation                       x 2027
+**Phase 1**
 
-- Phase 3
-    - add new Target x86 32Bit                            x 2028
-    - add new Target Raspberry                            x 2029
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows | ✅ | |
+| Hardware-Simulation für reale/virtuelle Hardware | ✅ | |
+| Port für OS-9/68k als 68030-CPU | ✅ | |
+| Virtuelle Netzwerk-Terminal-Simulatoren | ✅ | |
+| Netzwerk-Support als Ethernet-Simulation | ✅ | |
+| Telnet-Support in OS-9 | ✅ | |
+| Framebuffer-Support mit Remote-Support | 🔄 | Aug 2026 |
 
-## Q9 QCC C-Compiler
+**Phase 2**
 
-- Phase 1
-    - Ebnf Parser, create recursive top down parser       v   (first Version)
-    - Code generation to Intermediat Code                 v
-    - Intermidied Code defined as Stack machine           v
-    - Backend for 68k from Intermidied Code               v
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| Neues, schnelles virtuelles Hardware-Target für Q9-Flux | ⏳ | 2027 |
+| Neues Target-Hardware MC68000 | ⏳ | 2027 |
+| Interner 6809-Emulator | ⏳ | 2027 |
+| Interne CP/M-68k-Emulation | ⏳ | 2027 |
 
-- Phase 2
-    - C Preprozesoor                                      x 2027
-    - 68k Assembler for Q9                                x 2027
-    - Linker for Q9 ROF Format                            x 2028
+**Phase 3**
 
-- Phase 3
-    - other Frontends, Rust                               x 2028
-    - Interpreter for Intermdiet Code                     x 2028
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| Neues Target x86 32-Bit | ⏳ | 2028 |
+| Neues Target Raspberry | ⏳ | 2029 |
+
+## Q9-QCC (C-Compiler)
+
+**Phase 1**
+
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| EBNF-Parser, rekursiver Top-Down-Parser (erste Version) | ✅ | |
+| Codegenerierung zu Intermediate Code | ✅ | |
+| Intermediate Code als Stack-Maschine definiert | ✅ | |
+| Backend für 68k aus Intermediate Code | ✅ | |
+
+**Phase 2**
+
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| C-Präprozessor | ⏳ | 2027 |
+| 68k-Assembler für Q9 | ⏳ | 2027 |
+| Linker für Q9-ROF-Format | ⏳ | 2028 |
+
+**Phase 3**
+
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| Weitere Frontends, Rust | ⏳ | 2028 |
+| Interpreter für Intermediate Code | ⏳ | 2028 |
 
 ## Vinculum
 
-Hardware mit Motorola 68360, Network, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
+Hardware mit Motorola 68360, Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
 
-- Phase 1
-    - Schematic                                          - 2027
-    - Order PCB and Devices                              x 2028
-    - First Prototype with running Q9                    x 2028
+**Phase 1**
 
-## Q9 Frame (Framebuffer-über-Netzwerk, siehe auch Q9-Flex Phase-1-Eintrag oben)
+| Aufgabe | Status | Ziel |
+|---|---|---|
+| Schematic | 🔄 | 2027 |
+| PCB und Bauteile bestellen | ⏳ | 2028 |
+| Erster Prototyp mit laufendem Q9 | ⏳ | 2028 |
+
+## Q9 Frame (Framebuffer-über-Netzwerk, siehe auch Q9-Flux Phase-1-Eintrag oben)
 
 ### Phase 1 – Projektbasis ordnen
 
 - Q9 Forge als übergeordnete Struktur etablieren
-- Q9 Flex und Q9 Frame sauber einordnen
+- Q9-Flux und Q9 Frame sauber einordnen
 - bestehende Projekte und Buildpfade inventarisieren
 - gemeinsame Namenskonventionen und Dokumentationsstruktur festlegen
 - öffentliche Repository-Struktur vorbereiten
 
-### Phase 2 – Q9 Flex stabilisieren
+### Phase 2 – Q9-Flux stabilisieren
 
 - Emulator- und Hardware-Simulationsbereiche klar trennen
 - Speicher-, I/O- und Geräteabbild dokumentieren
