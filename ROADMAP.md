@@ -13,126 +13,46 @@ Zwischenständen, bewusst ohne feste Zeitangaben.
 | 🔄 | working, now aktiv in development |
 | ⏳ | in planing, tomorrow, next month or next century :-) |
 
-## Q9-OS
+## Projekt-Phasenplan
 
-**Phase 1**
+Hardware-Hinweis Vinculum: Motorola 68360, Netzwerk, 32 MByte RAM,
+Dual-CF-Drive, USB-Stick.
 
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| Kernel reengeneers, Disassembly | 🔄 | Dez 2026 |
-| Kernel-Planung, welche Teilmodule wir brauchen | ⏳ | 2027 |
-| Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode | ⏳ | 2027 |
-| Kernel neu schreiben in C | ⏳ | 2027 |
-| Systemmodule bauen | ⏳ | 2027/28 |
-| Manager bauen, untersuchen und planen | ⏳ | 2028 |
-
-## Q9-Flux (Emulator)
-
-**Phase 1**
-
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows | ✅ | |
-| Hardware-Simulation für reale/virtuelle Hardware | ✅ | |
-| Port für OS-9/68k als 68030-CPU | ✅ | |
-| Virtuelle Netzwerk-Terminal-Simulatoren | ✅ | |
-| Netzwerk-Support als Ethernet-Simulation | ✅ | |
-| Telnet-Support in OS-9 | ✅ | |
-| Framebuffer-Support mit Remote-Support | 🔄 | Aug 2026 |
-
-**Phase 2**
-
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| Neues, schnelles virtuelles Hardware-Target für Q9-Flux | ⏳ | 2027 |
-| Neues Target-Hardware MC68000 | ⏳ | 2027 |
-| Interner 6809-Emulator | ⏳ | 2027 |
-| Interne CP/M-68k-Emulation | ⏳ | 2027 |
-
-**Phase 3**
-
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| Neues Target x86 32-Bit | ⏳ | 2028 |
-| Neues Target Raspberry | ⏳ | 2029 |
-
-## Q9-QCC (C-Compiler)
-
-**Phase 1**
-
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| EBNF-Parser, rekursiver Top-Down-Parser (erste Version) | ✅ | |
-| Codegenerierung zu Intermediate Code | ✅ | |
-| Intermediate Code als Stack-Maschine definiert | ✅ | |
-| Backend für 68k aus Intermediate Code | ✅ | |
-
-**Phase 2**
-
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| C-Präprozessor | ⏳ | 2027 |
-| 68k-Assembler für Q9 | ⏳ | 2027 |
-| Linker für Q9-ROF-Format | ⏳ | 2028 |
-
-**Phase 3**
-
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| Weitere Frontends, Rust | ⏳ | 2028 |
-| Interpreter für Intermediate Code | ⏳ | 2028 |
-
-## Vinculum
-
-Hardware mit Motorola 68360, Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
-
-**Phase 1**
-
-| Aufgabe | Status | Ziel |
-|---|---|---|
-| Schematic | 🔄 | 2027 |
-| PCB und Bauteile bestellen | ⏳ | 2028 |
-| Erster Prototyp mit laufendem Q9 | ⏳ | 2028 |
+| Projekt | Phase | Aufgabe | Status | Ziel |
+|---|---|---|---|---|
+| Q9-OS | 1 | Kernel reengeneers, Disassembly | 🔄 | Dez 2026 |
+| Q9-OS | 1 | Kernel-Planung, welche Teilmodule wir brauchen | ⏳ | 2027 |
+| Q9-OS | 1 | Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode | ⏳ | 2027 |
+| Q9-OS | 1 | Kernel neu schreiben in C | ⏳ | 2027 |
+| Q9-OS | 1 | Systemmodule bauen | ⏳ | 2027/28 |
+| Q9-OS | 1 | Manager bauen, untersuchen und planen | ⏳ | 2028 |
+| Q9-Flux | 1 | Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows | ✅ | |
+| Q9-Flux | 1 | Hardware-Simulation für reale/virtuelle Hardware | ✅ | |
+| Q9-Flux | 1 | Port für OS-9/68k als 68030-CPU | ✅ | |
+| Q9-Flux | 1 | Virtuelle Netzwerk-Terminal-Simulatoren | ✅ | |
+| Q9-Flux | 1 | Netzwerk-Support als Ethernet-Simulation | ✅ | |
+| Q9-Flux | 1 | Telnet-Support in OS-9 | ✅ | |
+| Q9-Flux | 1 | Framebuffer-Support mit Remote-Support | 🔄 | Aug 2026 |
+| Q9-Flux | 2 | Neues, schnelles virtuelles Hardware-Target für Q9-Flux | ⏳ | 2027 |
+| Q9-Flux | 2 | Neues Target-Hardware MC68000 | ⏳ | 2027 |
+| Q9-Flux | 2 | Interner 6809-Emulator | ⏳ | 2027 |
+| Q9-Flux | 2 | Interne CP/M-68k-Emulation | ⏳ | 2027 |
+| Q9-Flux | 3 | Neues Target x86 32-Bit | ⏳ | 2028 |
+| Q9-Flux | 3 | Neues Target Raspberry | ⏳ | 2029 |
+| Q9-QCC | 1 | EBNF-Parser, rekursiver Top-Down-Parser (erste Version) | ✅ | |
+| Q9-QCC | 1 | Codegenerierung zu Intermediate Code | ✅ | |
+| Q9-QCC | 1 | Intermediate Code als Stack-Maschine definiert | ✅ | |
+| Q9-QCC | 1 | Backend für 68k aus Intermediate Code | ✅ | |
+| Q9-QCC | 2 | C-Präprozessor | ⏳ | 2027 |
+| Q9-QCC | 2 | 68k-Assembler für Q9 | ⏳ | 2027 |
+| Q9-QCC | 2 | Linker für Q9-ROF-Format | ⏳ | 2028 |
+| Q9-QCC | 3 | Weitere Frontends, Rust | ⏳ | 2028 |
+| Q9-QCC | 3 | Interpreter für Intermediate Code | ⏳ | 2028 |
+| Vinculum | 1 | Schematic | 🔄 | 2027 |
+| Vinculum | 1 | PCB und Bauteile bestellen | ⏳ | 2028 |
+| Vinculum | 1 | Erster Prototyp mit laufendem Q9 | ⏳ | 2028 |
 
 ## Q9 Frame (Framebuffer-über-Netzwerk, siehe auch Q9-Flux Phase-1-Eintrag oben)
-
-
-
-
-
-
-## Aktueller Stand je Repo
-
-- **Q9-Flux**: aktiv, funktionsfähiger CB030-Emulator, bootet echtes
-  Microware OS-9 (RBF/PCF-Descriptoren, Netzwerk, PMMU). Frisch bereinigt um
-  die frühe, aufgegebene "eigenes Mini-OS"-Vision (→ `Q9RESUME-Kernel`).
-- **Q9-OS**: gerade erst angelegt, bisher nur das `mbr`-Tool. Rest des
-  Microware-OS-9-Ports steht noch aus.
-- **Q9-Parsec**: aktiv, ausführlich getestete Regressionssuite
-  (`runtests.sh`). Offener Punkt: [#53](https://github.com/Q9-Forge/Q9-Parsec/issues/53)
-  — fünf Testgrammatiken ohne automatischen Erzeugungsschritt.
-- **Q9-QCC**: frisch aus Q9-Parsec extrahiert. Umfangreicher Tiny-C-Compiler
-  mit 68000-/ARM64-Backends, siehe dortiges `docs/TEILPROJEKTE.md` für die
-  Sprachkern-Roadmap (Priorität P0: Stringkonstanten, Literale, `typedef`,
-  `enum`, `struct`, ...). Braucht noch eine eigenständige Testsuite (bisher
-  nur über Q9-Parsecs `runtests.sh` mitgetestet).
-- **Vinculum**: noch nicht angelegt, folgt mit KiCad-Daten und später einem
-  bereinigten (Microware-freien) Image.
-
-## Nächste Schritte (unsortiert, kein Commitment)
-
-- Q9-Parsec#53 beheben (fünf fehlende Testgrammatik-Generierungsschritte)
-- Q9-OS mit weiteren Tools füllen, sobald klar ist, was noch gebraucht wird
-- Q9-QCC: eigene Regressionssuite, unabhängig von Q9-Parsecs `runtests.sh`
-- Vinculum-Repo anlegen, KiCad-Daten einpflegen
-- Q9-Forge-weites GitHub Project (Board) für repo-übergreifende Themen
-
----
-
-
-
-
-
 
 ### Phase 1 – Projektbasis ordnen
 
@@ -198,3 +118,31 @@ Hardware mit Motorola 68360, Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
 - konfigurierbare Pixel- und Speicherformate
 - weitergehende MC6845-Timing- und Cursorfunktionen
 - spätere Fenster- und Terminalintegration
+
+---
+
+## Aktueller Stand je Repo
+
+- **Q9-Flux**: aktiv, funktionsfähiger CB030-Emulator, bootet echtes
+  Microware OS-9 (RBF/PCF-Descriptoren, Netzwerk, PMMU). Frisch bereinigt um
+  die frühe, aufgegebene "eigenes Mini-OS"-Vision (→ `Q9RESUME-Kernel`).
+- **Q9-OS**: gerade erst angelegt, bisher nur das `mbr`-Tool. Rest des
+  Microware-OS-9-Ports steht noch aus.
+- **Q9-Parsec**: aktiv, ausführlich getestete Regressionssuite
+  (`runtests.sh`). Offener Punkt: [#53](https://github.com/Q9-Forge/Q9-Parsec/issues/53)
+  — fünf Testgrammatiken ohne automatischen Erzeugungsschritt.
+- **Q9-QCC**: frisch aus Q9-Parsec extrahiert. Umfangreicher Tiny-C-Compiler
+  mit 68000-/ARM64-Backends, siehe dortiges `docs/TEILPROJEKTE.md` für die
+  Sprachkern-Roadmap (Priorität P0: Stringkonstanten, Literale, `typedef`,
+  `enum`, `struct`, ...). Braucht noch eine eigenständige Testsuite (bisher
+  nur über Q9-Parsecs `runtests.sh` mitgetestet).
+- **Vinculum**: noch nicht angelegt, folgt mit KiCad-Daten und später einem
+  bereinigten (Microware-freien) Image.
+
+## Nächste Schritte (unsortiert, kein Commitment)
+
+- Q9-Parsec#53 beheben (fünf fehlende Testgrammatik-Generierungsschritte)
+- Q9-OS mit weiteren Tools füllen, sobald klar ist, was noch gebraucht wird
+- Q9-QCC: eigene Regressionssuite, unabhängig von Q9-Parsecs `runtests.sh`
+- Vinculum-Repo anlegen, KiCad-Daten einpflegen
+- Q9-Forge-weites GitHub Project (Board) für repo-übergreifende Themen
