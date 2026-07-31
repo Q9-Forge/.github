@@ -20,37 +20,37 @@ Dual-CF-Drive, USB-Stick.
 
 | Projekt | Phase | Aufgabe | Status | Ziel |
 |---|---|---|---|---|
-| Q9-OS | 1 | Kernel reengeneers, Disassembly | 🔄 | Dez 2026 |
-| Q9-OS | 1 | Kernel-Planung, welche Teilmodule wir brauchen | ⏳ | 2027 |
-| Q9-OS | 1 | Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode | ⏳ | 2027 |
-| Q9-OS | 1 | Kernel neu schreiben in C | ⏳ | 2027 |
-| Q9-OS | 1 | Systemmodule bauen | ⏳ | 2027/28 |
-| Q9-OS | 1 | Manager bauen, untersuchen und planen | ⏳ | 2028 |
-| Q9-Flux | 1 | Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows | ✅ | |
-| Q9-Flux | 1 | Hardware-Simulation für reale/virtuelle Hardware | ✅ | |
-| Q9-Flux | 1 | Port für OS-9/68k als 68030-CPU | ✅ | |
-| Q9-Flux | 1 | Virtuelle Netzwerk-Terminal-Simulatoren | ✅ | |
-| Q9-Flux | 1 | Netzwerk-Support als Ethernet-Simulation | ✅ | |
-| Q9-Flux | 1 | Telnet-Support in OS-9 | ✅ | |
-| Q9-Flux | 1 | Framebuffer-Support mit Remote-Support | 🔄 | Aug 2026 |
-| Q9-Flux | 2 | Neues, schnelles virtuelles Hardware-Target für Q9-Flux | ⏳ | 2027 |
-| Q9-Flux | 2 | Neues Target-Hardware MC68000 | ⏳ | 2027 |
-| Q9-Flux | 2 | Interner 6809-Emulator | ⏳ | 2027 |
-| Q9-Flux | 2 | Interne CP/M-68k-Emulation | ⏳ | 2027 |
-| Q9-Flux | 3 | Neues Target x86 32-Bit | ⏳ | 2028 |
-| Q9-Flux | 3 | Neues Target Raspberry | ⏳ | 2029 |
-| Q9-QCC | 1 | EBNF-Parser, rekursiver Top-Down-Parser (erste Version) | ✅ | |
-| Q9-QCC | 1 | Codegenerierung zu Intermediate Code | ✅ | |
-| Q9-QCC | 1 | Intermediate Code als Stack-Maschine definiert | ✅ | |
-| Q9-QCC | 1 | Backend für 68k aus Intermediate Code | ✅ | |
-| Q9-QCC | 2 | C-Präprozessor | ⏳ | 2027 |
-| Q9-QCC | 2 | 68k-Assembler für Q9 | ⏳ | 2027 |
-| Q9-QCC | 2 | Linker für Q9-ROF-Format | ⏳ | 2028 |
-| Q9-QCC | 3 | Weitere Frontends, Rust | ⏳ | 2028 |
-| Q9-QCC | 3 | Interpreter für Intermediate Code | ⏳ | 2028 |
-| Vinculum | 1 | Schematic | 🔄 | 2027 |
-| Vinculum | 1 | PCB und Bauteile bestellen | ⏳ | 2028 |
-| Vinculum | 1 | Erster Prototyp mit laufendem Q9 | ⏳ | 2028 |
+| **Q9-OS** | 1 | Kernel reengeneers, Disassembly | 🔄 | Dez 2026 |
+|  | 1 | Kernel-Planung, welche Teilmodule wir brauchen | ⏳ | 2027 |
+|  | 1 | Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode | ⏳ | 2027 |
+|  | 1 | Kernel neu schreiben in C | ⏳ | 2027 |
+|  | 1 | Systemmodule bauen | ⏳ | 2027/28 |
+|  | 1 | Manager bauen, untersuchen und planen | ⏳ | 2028 |
+| **Q9-Flux** | 1 | Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows | ✅ | |
+|  | 1 | Hardware-Simulation für reale/virtuelle Hardware | ✅ | |
+|  | 1 | Port für OS-9/68k als 68030-CPU | ✅ | |
+|  | 1 | Virtuelle Netzwerk-Terminal-Simulatoren | ✅ | |
+|  | 1 | Netzwerk-Support als Ethernet-Simulation | ✅ | |
+|  | 1 | Telnet-Support in OS-9 | ✅ | |
+|  | 1 | Framebuffer-Support mit Remote-Support | 🔄 | Aug 2026 |
+|  | 2 | Neues, schnelles virtuelles Hardware-Target für Q9-Flux | ⏳ | 2027 |
+|  | 2 | Neues Target-Hardware MC68000 | ⏳ | 2027 |
+|  | 2 | Interner 6809-Emulator | ⏳ | 2027 |
+|  | 2 | Interne CP/M-68k-Emulation | ⏳ | 2027 |
+|  | 3 | Neues Target x86 32-Bit | ⏳ | 2028 |
+|  | 3 | Neues Target Raspberry | ⏳ | 2029 |
+| **Q9-QCC** | 1 | EBNF-Parser, rekursiver Top-Down-Parser (erste Version) | ✅ | |
+|  | 1 | Codegenerierung zu Intermediate Code | ✅ | |
+|  | 1 | Intermediate Code als Stack-Maschine definiert | ✅ | |
+|  | 1 | Backend für 68k aus Intermediate Code | ✅ | |
+|  | 2 | C-Präprozessor | ⏳ | 2027 |
+|  | 2 | 68k-Assembler für Q9 | ⏳ | 2027 |
+|  | 2 | Linker für Q9-ROF-Format | ⏳ | 2028 |
+|  | 3 | Weitere Frontends, Rust | ⏳ | 2028 |
+|  | 3 | Interpreter für Intermediate Code | ⏳ | 2028 |
+| **Vinculum** | 1 | Schematic | 🔄 | 2027 |
+|  | 1 | PCB und Bauteile bestellen | ⏳ | 2028 |
+|  | 1 | Erster Prototyp mit laufendem Q9 | ⏳ | 2028 |
 
 ## Q9 Frame (Framebuffer-über-Netzwerk, siehe auch Q9-Flux Phase-1-Eintrag oben)
 
