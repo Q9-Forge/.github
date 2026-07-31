@@ -2,11 +2,6 @@
 
 Stand: 2026-07-31 (Tag der Repo-Reorganisation).
 
-# Detaillierte Phasenpläne (Andreas, Stand 2026-07-31)
-
-Die Reihenfolge orientiert sich an Abhängigkeiten und stabilen
-Zwischenständen, bewusst nur mit ungefähren Zeitangaben.
-
 Legende:
 
 | Symbol | Bedeutung |
@@ -14,6 +9,7 @@ Legende:
 | ✅ | ready, maybe with some issues |
 | 🔄 | working, now aktiv in development |
 | ⏳ | in planing, tomorrow, next month or next century :-) |
+
 
 
 ## Q9-OS – Operating System
@@ -45,6 +41,7 @@ Mögliche nächste Targets: Raspberry, x86 32-Bit, ESP32
 ### Phase 3
 
 - ⏳ Weitere Targets (Raspberry, x86, ...) — 2030 und später
+
 
 
 ## Q9-Flux – Emulator für Q9-OS (läuft auch mit anderen Systemen)
@@ -96,6 +93,7 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ Neues Target Raspberry — 2029
 
 
+
 ## Q9 Frame – Programm zum Darstellen des Q9-Flux-Framebuffers über Netzwerk
 
 - ✅ Übertragung: Videomodi, Reg-Info (6845), CLUT-Daten, Framebuffer (Dirty Area)
@@ -113,6 +111,7 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ Client auf ESP32 mit kleinem LCD-Display
 
 
+
 ## Q9-Parsec – Parser-Generator
 
 Parser-Generator. Erstellt Vorlagen in C-Code für den rekursiven Abstieg.
@@ -124,6 +123,7 @@ wird so eine Vorlage verwendet.
 - ✅ Erstellt Parsertabelle zum Erstellen einer Stack-Maschine
 - ⏳ Möglichkeit, weitere Aktionen interaktiv hinzuzufügen, und
   halbautomatisierte Unterstützung für Parser- und Codeerzeugung
+
 
 
 ## Q9-QCC
@@ -161,6 +161,7 @@ Bootstrap hat erfolgreich übersetzt, muss aber noch optimiert werden.
 - ⏳ Weitere Backends, Raspberry
 
 
+
 ## Vinculum
 
 Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
@@ -172,4 +173,3 @@ Eigene Hardware: CPU Motorola 68360, Ethernet, 32 MByte RAM, Dual-CF-Drive, USB-
 - ⏳ Erster Prototyp mit laufendem Q9 — 2028
 
 
-öffentlichen Entwicklungsstand von Q9 Forge
