@@ -93,6 +93,7 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ Neues Target x86 32-Bit — 2028
 - ⏳ Neues Target Raspberry — 2029
 
+
 ## Q9 Frame – Programm zum Darstellen des Q9-Flux-Framebuffers über Netzwerk
 
 - ✅ Übertragung: Videomodi, Reg-Info (6845), CLUT-Daten, Framebuffer (Dirty Area)
@@ -109,25 +110,47 @@ konfigurierbar, freies Memory-Mapping.
 - ⏳ spätere Fenster- und Terminalintegration
 - ⏳ Client auf ESP32 mit kleinem LCD-Display
 
-## Q9-QCC
 
-### Phase 1
+## Q9-Parsec    Parse Generator  
+
+Parsergenerator. Erstellt vorlagen in C-Code für den Recursiven abstieg. Als Eingabe wird eine 
+EBNF Spachdefinition erwartet. Erstellt werden Vorlagen zum erstellen von Parser und Codeerzeugung.
+Auch beim QCC wird so eine Vorlage verwendet.
 
 - ✅ EBNF-Parser, rekursiver Top-Down-Parser (erste Version)
-- ✅ Codegenerierung zu Intermediate Code
-- ✅ Intermediate Code als Stack-Maschine definiert
-- ✅ Backend für 68k aus Intermediate Code
+- ✅ Erstellt Parsertablle zum erstellen einer Stackmaschine.
+- ⏳ Möglichkeit um weitere Aktionen interaktiv hinzuzufügen und halbautomatisiert Parser und Codeerzeugung zu unterstützen. 
+
+
+## Q9-QCC
+
+C-Compiler für Q9 / OS-9/68K. Bei den ersten Versuchen gab es große Problem mit Speichervebrauch im Übersetzungssysten. 
+16 MByte reichen kaum zum Übersetzen. Auf einem 68K System evtl. ein Problem. Erster Bootstrap hat übersetzt, 
+muss aber noch optimiert werden,
 
 ### Phase 2
+- ✅ Aus Q9-Parsec Ausgabe Lexer, Syntaxchack erzeugen
+- ✅ IR Coder definieren und Dokumentieren.
+- ✅ Frantend erzeugt IR Zwischencode
+- ✅ Backend für 68k aus Intermediate Code, OS-9 compatibel
 
-- ⏳ C-Präprozessor — 2027
-- ⏳ 68k-Assembler für Q9 — 2027
-- ⏳ Linker für Q9-ROF-Format — 2028
+### Phase 2
+- ⏳ C-Preprocessor, ISO C89 / C99 /C16 compatibel
+- ⏳ Assembler 68k, OS-9 Format, Ausgabe ROF Format 
+- ⏳ Linker für ROF Format, Ausgabe OS-9/Q9 Modul
+- ⏳ Weitere Backends, X86 32Bit
 
-### Phase 3
+### Phase 3  
+- ⏳ QCC Aufrufmanager, rufr QCC Module zum compileren auf 2027 
+- ⏳ Optimierungen im IR Twischencode 2027
+- ⏳ Optimierungen im Assembler Code 2027
 
-- ⏳ Weitere Frontends, Rust — 2028
+### Phase 4
+- ⏳ Weitere Frontends, Rust, go, PASCAL, Oberon — 2029
 - ⏳ Interpreter für Intermediate Code — 2028
+- ⏳ Weitere Backends, Raspberry
+
+
 
 ## Vinculum
 
