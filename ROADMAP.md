@@ -29,12 +29,83 @@ Zwischenständen, bewusst ohne feste Zeitangaben.
 ### Phase 1
 
 - ✅ Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows
-- ✅ Hardware-Simulation für reale/virtuelle Hardware
 - ✅ Port für OS-9/68k als 68030-CPU
-- ✅ Virtuelle Netzwerk-Terminal-Simulatoren
-- ✅ Netzwerk-Support als Ethernet-Simulation
 - ✅ Telnet-Support in OS-9
-- 🔄 Framebuffer-Support mit Remote-Support — Aug 2026
+- Hardware-Simulationen:
+  - ✅ CF-Kartenleser (CompactFlash, RBF/PCF)
+  - ✅ UART-Simulator (68681 DUART)
+  - ✅ RTC-Simulator (RTC72421)
+  - ✅ Timer-/Clock-Simulator (IRQ3)
+  - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8)
+  - ✅ Ethernet-Simulation (QUICC)
+  - 🔄 Framebuffer mit Remote-Support (Q9 Frame) — Aug 2026, Details siehe unten
+
+#### Q9 Frame (Framebuffer-über-Netzwerk)
+
+##### Phase 1 – Projektbasis ordnen
+
+- Q9 Forge als übergeordnete Struktur etablieren
+- Q9-Flux und Q9 Frame sauber einordnen
+- bestehende Projekte und Buildpfade inventarisieren
+- gemeinsame Namenskonventionen und Dokumentationsstruktur festlegen
+- öffentliche Repository-Struktur vorbereiten
+
+##### Phase 2 – Q9-Flux stabilisieren
+
+- Emulator- und Hardware-Simulationsbereiche klar trennen
+- Speicher-, I/O- und Geräteabbild dokumentieren
+- bestehende Tests und Buildvarianten vereinheitlichen
+- reproduzierbare Builds für die unterstützten Plattformen sicherstellen
+
+##### Phase 3 – Q9 Frame v1
+
+- separates Video-RAM bei `0xFD000000` anbinden
+- MC6845-Registermodell ab `0xFFFFA000` integrieren
+- monochromen 1-Bit-Framebuffer implementieren
+- Bit- und Byte-Layout festlegen und testen
+- Dirty-Tracking bei VRAM-Schreibzugriffen umsetzen
+
+##### Phase 4 – Host-Service-Manager
+
+- gemeinsamen nicht-blockierenden Service-Rahmen bereitstellen
+- bestehenden Terminal-Service einbinden
+- Q9-Frame-TCP-Service ergänzen
+- Updatefrequenz, Sendewarteschlangen und Client-Lebenszyklus implementieren
+
+##### Phase 5 – Q9 Frame Netzwerk v1
+
+- `HELLO` und `VIDEO_INFO`
+- `FRAME_FULL` und `FRAME_UPDATE`
+- Vollbildanforderung und Resynchronisierung
+- UDP-Discovery im lokalen Netz
+- Protokoll- und Verbindungstests
+
+##### Phase 6 – Test-Clients
+
+- kleiner Desktop-Referenzclient
+- Nearest-Neighbor-Skalierung
+- Fenster-, Vollbild- und Minimierungsverhalten
+- Test mit verschiedenen Updatefrequenzen und langsamen Clients
+- später ESP32-Client mit kleinem Display
+
+##### Phase 7 – Öffentliche Veröffentlichung
+
+- README und Quickstart vervollständigen
+- Lizenzen und Drittanbieter-Komponenten dokumentieren
+- Debugdaten, lokale Pfade und private Konfigurationen entfernen
+- CI, Tests und reproduzierbare Builds einrichten
+- Versions- und Release-Konvention festlegen
+- erster öffentlicher Entwicklungsstand von Q9 Forge
+
+##### Phase 8 – Erweiterungen
+
+- Farbmodi und virtuelle DAC-Modelle
+- mehrere gleichzeitige Video-Clients
+- optionaler UDP-Transport für Video-Updates
+- Tastatur- und Mauskanal
+- konfigurierbare Pixel- und Speicherformate
+- weitergehende MC6845-Timing- und Cursorfunktionen
+- spätere Fenster- und Terminalintegration
 
 ### Phase 2
 
@@ -77,73 +148,6 @@ Hardware: Motorola 68360, Netzwerk, 32 MByte RAM, Dual-CF-Drive, USB-Stick.
 - 🔄 Schematic — 2027
 - ⏳ PCB und Bauteile bestellen — 2028
 - ⏳ Erster Prototyp mit laufendem Q9 — 2028
-
-## Q9 Frame (Framebuffer-über-Netzwerk, siehe auch Q9-Flux Phase-1-Eintrag oben)
-
-### Phase 1 – Projektbasis ordnen
-
-- Q9 Forge als übergeordnete Struktur etablieren
-- Q9-Flux und Q9 Frame sauber einordnen
-- bestehende Projekte und Buildpfade inventarisieren
-- gemeinsame Namenskonventionen und Dokumentationsstruktur festlegen
-- öffentliche Repository-Struktur vorbereiten
-
-### Phase 2 – Q9-Flux stabilisieren
-
-- Emulator- und Hardware-Simulationsbereiche klar trennen
-- Speicher-, I/O- und Geräteabbild dokumentieren
-- bestehende Tests und Buildvarianten vereinheitlichen
-- reproduzierbare Builds für die unterstützten Plattformen sicherstellen
-
-### Phase 3 – Q9 Frame v1
-
-- separates Video-RAM bei `0xFD000000` anbinden
-- MC6845-Registermodell ab `0xFFFFA000` integrieren
-- monochromen 1-Bit-Framebuffer implementieren
-- Bit- und Byte-Layout festlegen und testen
-- Dirty-Tracking bei VRAM-Schreibzugriffen umsetzen
-
-### Phase 4 – Host-Service-Manager
-
-- gemeinsamen nicht-blockierenden Service-Rahmen bereitstellen
-- bestehenden Terminal-Service einbinden
-- Q9-Frame-TCP-Service ergänzen
-- Updatefrequenz, Sendewarteschlangen und Client-Lebenszyklus implementieren
-
-### Phase 5 – Q9 Frame Netzwerk v1
-
-- `HELLO` und `VIDEO_INFO`
-- `FRAME_FULL` und `FRAME_UPDATE`
-- Vollbildanforderung und Resynchronisierung
-- UDP-Discovery im lokalen Netz
-- Protokoll- und Verbindungstests
-
-### Phase 6 – Test-Clients
-
-- kleiner Desktop-Referenzclient
-- Nearest-Neighbor-Skalierung
-- Fenster-, Vollbild- und Minimierungsverhalten
-- Test mit verschiedenen Updatefrequenzen und langsamen Clients
-- später ESP32-Client mit kleinem Display
-
-### Phase 7 – Öffentliche Veröffentlichung
-
-- README und Quickstart vervollständigen
-- Lizenzen und Drittanbieter-Komponenten dokumentieren
-- Debugdaten, lokale Pfade und private Konfigurationen entfernen
-- CI, Tests und reproduzierbare Builds einrichten
-- Versions- und Release-Konvention festlegen
-- erster öffentlicher Entwicklungsstand von Q9 Forge
-
-### Phase 8 – Erweiterungen
-
-- Farbmodi und virtuelle DAC-Modelle
-- mehrere gleichzeitige Video-Clients
-- optionaler UDP-Transport für Video-Updates
-- Tastatur- und Mauskanal
-- konfigurierbare Pixel- und Speicherformate
-- weitergehende MC6845-Timing- und Cursorfunktionen
-- spätere Fenster- und Terminalintegration
 
 ---
 
