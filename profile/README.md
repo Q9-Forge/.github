@@ -18,6 +18,8 @@ account [`foellmy51`](https://github.com/foellmy51) with a `Q9RESUME-`
 prefix (e.g. `Q9RESUME-Kernel`, `Q9RESUME-Edit`) — full history preserved,
 in case it gets picked up again someday.
 
-See [`CONVENTIONS.md`](CONVENTIONS.md) for the project structure
-convention and [`ROADMAP.md`](ROADMAP.md) ([German: `ROADMAP_de.md`](ROADMAP_de.md))
+See [`CONVENTIONS.md`](https://github.com/Q9-Forge/.github/blob/main/CONVENTIONS.md)
+for the project structure convention and
+[`ROADMAP.md`](https://github.com/Q9-Forge/.github/blob/main/ROADMAP.md)
+([German: `ROADMAP_de.md`](https://github.com/Q9-Forge/.github/blob/main/ROADMAP_de.md))
 for the current status.
