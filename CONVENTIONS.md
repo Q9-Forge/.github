@@ -8,7 +8,7 @@ unabhängige Repos, je mit eigener, ungemischter Git-Historie:
 - **Q9-Flux** — CB030/68030-Hardware-Emulator
 - **Q9-OS** — Port von echtem Microware OS-9/68K
 - **Q9-Parsec** — EBNF-Parser-/Scanner-Generator
-- **Q9-QCC** — Tiny-C-Compiler (baut auf Q9-Parsec auf)
+- **Q9-QCC** — QCC-Compiler (baut auf Q9-Parsec auf)
 - **Vinculum** — Hardware-Zielsystem (KiCad, Image); kein `Q9-`-Präfix, da
   Hardware nicht denselben Namensdruck hat wie Software
 
