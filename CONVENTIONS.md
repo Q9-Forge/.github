@@ -51,6 +51,14 @@ erzeugen), wird das im README des abhängigen Repos dokumentiert
 (Checkout-Anleitung, Build-Reihenfolge) — kein automatisches Git-Submodule
 ohne expliziten Anlass.
 
+## Dokumentationssprache
+
+Original-Dokumentation/`.md`-Dateien werden auf **Englisch** verfasst.
+Dazu jeweils eine deutsche Übersetzung mit Suffix `_de` im Dateinamen
+(z.B. `ARBEITSPLAN.md` engl. Original + `ARBEITSPLAN_de.md`). Gilt
+repo-übergreifend für alle Q9-Forge-Projekte, abweichend von der
+pauschalen "Deutsch"-Regel in `C:\projects\PROJECT.md`.
+
 ## Issues
 
 Repo-spezifische Bugs/Aufgaben als Issue im jeweiligen Repo. Cross-Repo-
