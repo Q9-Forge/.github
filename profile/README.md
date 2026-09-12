@@ -25,7 +25,7 @@ entwickeln. Später soll Q9 um moderne Funktionen erweitert werden.
 Der Anfang liegt — wie bei Microware — bei der historischen Motorola-
 68000-Prozessorfamilie. Ziel ist ein kompatibler, modularer und portabler
 Kernel mit eigenem I/O-System und eigenen I/O-Managern. Bis dahin ist noch
- einiges an Arbeit zu leisten.
+einiges an Arbeit zu leisten.
 
 ## Was ist Q9-Forge?
 
@@ -33,9 +33,9 @@ Q9-Forge bündelt die Projekte, die für Entwicklung, Betrieb und Erweiterung
 von Q9 benötigt werden:
 
 - [Q9-OS](https://github.com/Q9-Forge/Q9-OS) — Betriebssystemkern und
-  OS-Grundlagen sowie das I/O System.
+  OS-Grundlagen sowie das I/O-System.
 - [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) — Emulator und
-  Hardware-Visualisierung (68k und x86 und Gerätekomponenten).
+  Hardware-Visualisierung für 68k, x86 und Gerätekomponenten.
 - [Q9-QCC](https://github.com/Q9-Forge/Q9-QCC) — Compiler-Werkzeugkette mit
   Parsergenerator, C-Frontend, IR-Zwischencode, Backends und Interpreter.
 - [Q9-Port](https://github.com/Q9-Forge/Q9-Port) — vorbereitetes Repository
@@ -54,9 +54,9 @@ keine stabilen Releases.
 | --- | --- | --- |
 | [Q9-OS](https://github.com/Q9-Forge/Q9-OS) |  | Grundaufbau und Kernelentwicklung |
 | &nbsp;&nbsp;- [Q9-OS Kernel 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/68k) | 🔴 0.1 | Kernelentwicklung begonnen |
-| &nbsp;&nbsp;- [Q9-OS Kernel x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/x86) | 🔴 | N.A. |
-| &nbsp;&nbsp;- [Q9-OS IOMAN 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/68k) | 🔴 | N.A. |
-| &nbsp;&nbsp;- [Q9-OS IOMAN x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/x86) | 🔴 | N-A |
+| &nbsp;&nbsp;- [Q9-OS Kernel x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/x86) | 🔴 | Noch nicht begonnen |
+| &nbsp;&nbsp;- [Q9-OS IOMAN 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/68k) | 🔴 | Noch nicht begonnen |
+| &nbsp;&nbsp;- [Q9-OS IOMAN x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/x86) | 🔴 | Noch nicht begonnen |
 | [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) |  | Aktive Emulatorentwicklung |
 | &nbsp;&nbsp;- [Q9-Flux 68k](https://github.com/Q9-Forge/Q9-Flux/tree/main/Q9-Flux-68k) | 🟢 0.15 | Funktionsfähiger Entwicklungsstand |
 | &nbsp;&nbsp;- [Q9-Flux x86](https://github.com/Q9-Forge/Q9-Flux/tree/main/Q9-Flux-x86) | 🔴 0.1 | Frühe Entwicklung und Analyse |
@@ -64,12 +64,12 @@ keine stabilen Releases.
 | &nbsp;&nbsp;- [Q9-QCC Frontend-C](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-FRONTEND-C) | 🟢 0.15 | In Entwicklung |
 | &nbsp;&nbsp;- [Q9-QCC Backend-68k](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-68K) | 🟢 0.15 | Funktionsfähiger Entwicklungsstand |
 | &nbsp;&nbsp;- [Q9-QCC Backend-x86](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-x86) | 🔴 0.1 | Frühe Entwicklung |
-| &nbsp;&nbsp;- [Q9-QCC Backend-ARM64](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-ARM64) | 🟢 0.1 | Frühe Entwicklung |
+| &nbsp;&nbsp;- [Q9-QCC Backend-ARM64](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-ARM64) | 🔴 0.1 | Frühe Entwicklung |
 | &nbsp;&nbsp;- [Q9-QCC Run](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-RUN) | 🟢 0.1 | IR-Interpreter in Entwicklung |
 | [Q9-Port](https://github.com/Q9-Forge/Q9-Port) |  | Vorbereitet, noch nicht aktiviert |
 
 Die Angaben werden im Laufe der Entwicklung angepasst und sollen vor allem
-einen schnellen Überblick über Reifegrad und Schwerpunkt der Projekte Uskunft geben.
+einen schnellen Überblick über Reifegrad und Schwerpunkt der Projekte geben.
 
 Q9-Forge befindet sich in aktiver Entwicklung. Der Schwerpunkt liegt derzeit
 auf dem Q9-Kernel, dem 68k-Emulator und der Vervollständigung der
@@ -80,3 +80,10 @@ Weitere Informationen:
 - [Projektkonventionen](../CONVENTIONS.md)
 - [Roadmap](../ROADMAP.md)
 - [Roadmap auf Deutsch](../ROADMAP_de.md)
+
+## Mitmachen
+
+Supporter und Contributors sind herzlich willkommen. Fragen, Fehlermeldungen,
+Ideen und Verbesserungsvorschläge können als [Issue](https://github.com/Q9-Forge/Q9-OS/issues)
+eingereicht werden. Wer Code oder Dokumentation beitragen möchte, kann gerne
+einen Pull Request erstellen.
