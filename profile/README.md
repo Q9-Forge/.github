@@ -53,17 +53,17 @@ keine stabilen öffentlichen Releases.
 
 | Projekt | Version / Stand | Status |
 | --- | --- | --- |
-| [Q9-OS](https://github.com/Q9-Forge/Q9-OS) | 0.1 | Grundaufbau und Kernelentwicklung |
-| [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) | 0.15 | Aktive Emulatorentwicklung |
-| Q9-Flux 68k | 0.15 | Funktionsfähiger Entwicklungsstand |
-| Q9-Flux x86 | 0.1 | Frühe Entwicklung und Analyse |
-| [Q9-QCC](https://github.com/Q9-Forge/Q9-QCC) | 0.15 | Aktive Compilerentwicklung |
-| Q9-QCC Frontend-C | 0.15 | In Entwicklung |
-| Q9-QCC Backend-68k | 0.15 | Weit fortgeschritten, aber noch unfertig |
-| Q9-QCC Backend-x86 | 0.1 | Frühe Entwicklung |
-| Q9-QCC Backend-ARM64 | 0.1 | Frühe Entwicklung |
-| Q9-QCC Run | 0.1 | IR-Interpreter in Entwicklung |
-| [Q9-Port](https://github.com/Q9-Forge/Q9-Port) | 0.0 | Vorbereitet, noch nicht aktiviert |
+| [Q9-OS](https://github.com/Q9-Forge/Q9-OS) | 🔴 0.1 | Grundaufbau und Kernelentwicklung |
+| [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) | 🟢 0.15 | Aktive Emulatorentwicklung |
+| [Q9-Flux 68k](https://github.com/Q9-Forge/Q9-Flux/tree/main/Q9-Flux-68k) | 🟢 0.15 | Funktionsfähiger Entwicklungsstand |
+| [Q9-Flux x86](https://github.com/Q9-Forge/Q9-Flux/tree/main/Q9-Flux-x86) | 🔴 0.1 | Frühe Entwicklung und Analyse |
+| [Q9-QCC](https://github.com/Q9-Forge/Q9-QCC) | 🟢 0.15 | Aktive Compilerentwicklung |
+| [Q9-QCC Frontend-C](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-FRONTEND-C) | 🟢 0.15 | In Entwicklung |
+| [Q9-QCC Backend-68k](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-68K) | 🟢 0.15 | Funktionsfähiger Entwicklungsstand |
+| [Q9-QCC Backend-x86](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-x86) | 🔴 0.1 | Frühe Entwicklung |
+| [Q9-QCC Backend-ARM64](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-ARM64) | 🔴 0.1 | Frühe Entwicklung |
+| [Q9-QCC Run](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-RUN) | 🟢 0.1 | IR-Interpreter in Entwicklung |
+| [Q9-Port](https://github.com/Q9-Forge/Q9-Port) | 🔴 0.0 | Vorbereitet, noch nicht aktiviert |
 
 Die Angaben werden im Laufe der Entwicklung angepasst und sollen vor allem
 einen schnellen Überblick über Reifegrad und Schwerpunkt der Projekte geben.
