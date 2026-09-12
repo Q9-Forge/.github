@@ -51,7 +51,7 @@ gehalten; gemeinsame Quellen liegen in eigenen Bereichen.
 Die Versionsnummern bezeichnen den internen Entwicklungsstand und sind noch
 keine stabilen öffentlichen Releases.
 
-| Projekt | Version / Stand | Status |
+| Projekt | Status | Beschreibung |
 | --- | --- | --- |
 | [Q9-OS](https://github.com/Q9-Forge/Q9-OS) |  | Grundaufbau und Kernelentwicklung |
 | &nbsp;&nbsp;- [Q9-OS Kernel 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/68k) | 🔴 0.1 | Kernelentwicklung begonnen |
@@ -71,8 +71,6 @@ keine stabilen öffentlichen Releases.
 
 Die Angaben werden im Laufe der Entwicklung angepasst und sollen vor allem
 einen schnellen Überblick über Reifegrad und Schwerpunkt der Projekte geben.
-
-## Status
 
 Q9-Forge befindet sich in aktiver Entwicklung. Der Schwerpunkt liegt derzeit
 auf dem Q9-Kernel, dem 68k-Emulator und der Vervollständigung der
