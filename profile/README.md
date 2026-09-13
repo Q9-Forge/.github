@@ -24,6 +24,7 @@ Q9-Forge brings together the projects required to develop and run Q9:
 - [Q9-OS](https://github.com/Q9-Forge/Q9-OS) — operating-system kernel and system components.
 - [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) — emulator and hardware models.
 - [Q9-QCC](https://github.com/Q9-Forge/Q9-QCC) — compiler toolchain, IR and backends.
+- [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) — system, network and language utilities.
 - [Q9-Port](https://github.com/Q9-Forge/Q9-Port) — reserved for future porting work.
 
 The projects are maintained in separate repositories so that each toolchain
