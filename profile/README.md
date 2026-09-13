@@ -51,7 +51,7 @@ releases.
 | &nbsp;&nbsp;- [Q9-QCC x86 backend](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-x86) | 🔴 0.1 | Early development |
 | &nbsp;&nbsp;- [Q9-QCC ARM64 backend](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-ARM64) | 🔴 0.1 | Early development |
 | &nbsp;&nbsp;- [Q9-QCC Run](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-RUN) | 🟢 0.1 | IR interpreter in development |
-| [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) |  | System, network and language utilities |
+| [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) | 🟢 0.1 | System, network and language utilities |
 | [Q9-Port](https://github.com/Q9-Forge/Q9-Port) |  | Reserved for future porting work |
 
 ## Contributing
