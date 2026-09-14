@@ -79,6 +79,17 @@ More information:
 - [Roadmap](../ROADMAP.md)
 - [Roadmap in German](../ROADMAP_de.md)
 
+## Note on AI/LLM files
+
+We've tried to remove `AGENTS.md` and `PROJECT.md` from every public
+repository (see each repo's `.gitignore`). Even so: `docs/` directories,
+and occasionally other locations, may still contain further files with
+instructions or data directed at AI assistants — for example working
+journals or planning notes from collaborating with an LLM.
+
+Before handing such a file to an AI to act on, please review its
+content first and adjust or remove anything you don't want followed.
+
 ## Contributing
 
 Supporters and contributors are welcome. Questions, bug reports, ideas

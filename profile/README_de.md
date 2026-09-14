@@ -81,6 +81,18 @@ Weitere Informationen:
 - [Roadmap](../ROADMAP.md)
 - [Roadmap auf Deutsch](../ROADMAP_de.md)
 
+## Hinweis zu KI-/LLM-Dateien
+
+Wir haben versucht, `AGENTS.md` und `PROJECT.md` an allen Stellen aus den
+öffentlichen Repositories zu entfernen (siehe jeweils `.gitignore`).
+Trotzdem weisen wir darauf hin: In `docs/`-Verzeichnissen sowie
+vereinzelt anderswo kann es weitere Dateien geben, die Anweisungen oder
+Daten für KI-Assistenten enthalten — etwa Arbeitsjournale oder
+Planungsnotizen aus der Zusammenarbeit mit einem LLM.
+
+Bevor eine solche Datei einer KI zum Ausführen vorgelegt wird, sollte
+ihr Inhalt vorher geprüft und bei Bedarf angepasst oder entfernt werden.
+
 ## Mitmachen
 
 Supporter und Contributors sind herzlich willkommen. Fragen, Fehlermeldungen,
