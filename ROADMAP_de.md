@@ -25,9 +25,9 @@ Mögliche nächste Targets: x86-32-Bit, ARM64 (Raspberry), RISC-V
 
 ### Phase 1
 
-- ✅ Kernel-Planung, Infrastruktor, Modul splitting — 09/26
-- ✅ Kernel: erste Übersetzung in C, erstmals Lauffähig ohne alle Sys Calls - 09/26 
-- ⏳ Kernel complett in C — Q1 2027
+- ✅ Kernel-Planung, Infrastruktor, Modul splitting — 07/26
+- ✅ Kernel: erste Übersetzung in C, erstmals Lauffähig, Sys Calls fehlen - 09/26 
+- ⏳ Kernel complett in C — Q4 2026
 
 
 ### Phase 2
