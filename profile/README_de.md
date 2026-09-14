@@ -66,7 +66,7 @@ keine stabilen Releases.
 | &nbsp;&nbsp;- [Q9-QCC Backend-x86](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-x86) | 🔴 0.1 | Frühe Entwicklung |
 | &nbsp;&nbsp;- [Q9-QCC Backend-ARM64](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-ARM64) | 🔴 0.1 | Frühe Entwicklung |
 | &nbsp;&nbsp;- [Q9-QCC Run](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-RUN) | 🟢 0.1 | IR-Interpreter in Entwicklung |
-| [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) |  | System-, Netzwerk- und Sprachwerkzeuge |
+| [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) | 🟢 0.1  | System-, Netzwerk- und Sprachwerkzeuge |
 
 Die Angaben werden im Laufe der Entwicklung angepasst und sollen vor allem
 einen schnellen Überblick über Reifegrad und Schwerpunkt der Projekte geben.
