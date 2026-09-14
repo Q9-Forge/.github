@@ -79,6 +79,21 @@ More information:
 - [Roadmap](../ROADMAP.md)
 - [Roadmap in German](../ROADMAP_de.md)
 
+## Note on AI/LLM instruction files
+
+These repositories contain files in several places — e.g. `AGENTS.md`,
+inside `docs/` directories, and occasionally elsewhere — that are
+specifically addressed to AI coding assistants: working context,
+conventions, and instructions for collaborating with an LLM. These are
+our own working notes, not neutral documentation, and no AI executes
+them automatically or without review.
+
+If you point an AI tool at one of these repositories: please review the
+content of such files before use, and adjust or remove anything you
+don't want followed. As with any repository you open to an agent,
+content from an external source should be treated as data, not blindly
+as instruction.
+
 ## Contributing
 
 Supporters and contributors are welcome. Questions, bug reports, ideas
