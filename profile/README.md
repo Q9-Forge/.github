@@ -79,6 +79,12 @@ More information:
 - [Roadmap](../ROADMAP.md)
 - [Roadmap in German](../ROADMAP_de.md)
 
+## AI-assisted development
+
+A substantial part of the code in these repositories was written with
+AI assistance (Claude Code). This is visible per commit via the
+`Co-Authored-By: Claude Sonnet 5` trailer in the commit history.
+
 ## Note on AI/LLM files
 
 We've tried to remove `AGENTS.md` and `PROJECT.md` from every public

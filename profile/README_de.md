@@ -81,6 +81,13 @@ Weitere Informationen:
 - [Roadmap](../ROADMAP.md)
 - [Roadmap auf Deutsch](../ROADMAP_de.md)
 
+## KI-unterstützte Entwicklung
+
+Ein erheblicher Teil des Codes in diesen Repositories ist mit
+KI-Unterstützung (Claude Code) entstanden. Das ist je Commit über den
+Vermerk `Co-Authored-By: Claude Sonnet 5` in der Commit-Historie
+nachvollziehbar.
+
 ## Hinweis zu KI-/LLM-Dateien
 
 Wir haben versucht, `AGENTS.md` und `PROJECT.md` an allen Stellen aus den
