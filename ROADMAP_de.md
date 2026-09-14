@@ -49,27 +49,27 @@ konfigurierbar, freies Memory-Mapping.
 
 ### Phase 1
 
-- ✅ Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows
-- ✅ Original-Bootimage kann verwendet werden, frei einstellbar
-- ✅ Ethernet-Support, 3 Modi: NAT, VMnet, Bridge
-- ✅ Telnet-Support in OS-9
+- ✅ Emulator für Motorola 68K (Musashi-Basis), läuft auf Mac/Linux/Windows 06/26
+- ✅ Original OS-9 Bootimage kann verwendet werden, frei einstellbar 06/26
+- ✅ Ethernet-Support, 3 Modi: NAT, VMnet, Bridge 07/26
+- ✅ Telnet-Support in OS-9 07/26
 - 🔄 ? FTP-Support, Issue (FTP nutzt noch den alten TCP-Socket-Pfad)
 - 🔄 ? NFS-Support, Issue
 - 🔄 ? Samba-Support, Issue
-- ✅ Linux-Bash-Support V1.10.12 08/26
+- ✅ Linux-Bash-Support V1.10.12 08/26  07/26
 - Hardware-Simulationen:
-  - ✅ CF-Kartenleser (CompactFlash)
+  - ✅ CF-Kartenleser (CompactFlash) 03/24
     - ✅ Grundfunktionen
-    - ✅ Partition-Support über MBR-Record
+    - ✅ Partition-Support über MBR-Record  07/26
     - 🔄 RBF-/PCF-Support — Nov 2026
     - 🔄 Master-/Slave-Support — Okt 2026
-  - ✅ UART-Simulator (68681 DUART)
-  - ✅ RTC-Simulator (RTC72421)
-  - ✅ Timer-/Clock-Simulator (IRQ3)
-  - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8)
-  - ✅ Ethernet-Simulation (QUICC)
-  - 🔄 MC6845-Framebuffer-Simulation mit Remote-Verbindung (Q9 Frame) — Sep 2026
-  - ✅ Gegenstück-Projekt Q9 Frame stellt den Framebuffer in einem Fenster dar (für Mac)
+  - ✅ UART-Simulator (68681 DUART)  Q1/24
+  - ✅ RTC-Simulator (RTC72421) Q1/24
+  - ✅ Timer-/Clock-Simulator (IRQ3)  Q1/24
+  - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8) 07/26
+  - ✅ Ethernet-Simulation (QUICC) 07/26
+  - 🔄 MC6845-Framebuffer-Simulation mit Remote-Verbindung (Q9 Frame) — 08/2026
+  - ✅ Gegenstück-Projekt Q9 Frame stellt den Framebuffer in einem Fenster dar (für Mac) 08/26
 
 ### Phase 2
 
@@ -91,12 +91,13 @@ konfigurierbar, freies Memory-Mapping.
 
 ## Q9 Frame – Programm zum Darstellen des Q9-Flux-Framebuffers über Netzwerk
 
-- ✅ Übertragung: Videomodi, Reg-Info (6845), CLUT-Daten, Framebuffer (Dirty Area)
-- ✅ Volle Unterstützung des MC6845-Registermodells, dynamische Auflösung, on the run umstellbar
-- ✅ Videomodi und DAC-Modelle, von monochromem 1-Bit bis 24-Bit-Vollfarbmodus, on the run umschaltbar
-- ✅ UDP-HELLO-Protokoll zum automatischen Finden des Servers
-- ✅ Screenshot
-- ⏳ Host-Service-Manager: gemeinsamer, nicht-blockierender Service-Rahmen für Terminal- und Q9-Frame-TCP-Service, inkl. Update-Frequenz, Sendewarteschlangen und Client-Lebenszyklus
+- ✅ Übertragung: Videomodi, Reg-Info (6845), CLUT-Daten, Framebuffer (Dirty Area) 08/26
+- ✅ Volle Unterstützung des MC6845-Registermodells, dynamische Auflösung, on the run umstellbar 08/26
+- ✅ Videomodi und DAC-Modelle, von monochromem 1-Bit bis 24-Bit-Vollfarbmodus, on the run umschaltbar  08/26
+- ✅ UDP-HELLO-Protokoll zum automatischen Finden des Servers   08/26
+- ✅ Screenshot  08/26
+- ⏳ Host-Service-Manager: gemeinsamer, nicht-blockierender Service-Rahmen für Terminal- und Q9-Frame-TCP-Service, 
+      inkl. Update-Frequenz, Sendewarteschlangen und Client-Lebenszyklus 2ß27
 - ⏳ Mehrere Clients gleichzeitig
 - ⏳ Optionaler UDP-Transport
 - ⏳ Maus- und Tastatur-Rückkanal (Cursor und Mauszeiger)
@@ -114,10 +115,11 @@ Als Eingabe wird eine EBNF-Sprachdefinition erwartet. Erstellt werden
 Vorlagen zum Erstellen von Parsern und zur Codeerzeugung. Auch bei Q9-QCC
 wird so eine Vorlage verwendet.
 
-- ✅ EBNF-Parser, rekursiver Top-Down-Parser (erste Version)
-- ✅ Erstellt Parsertabelle zum Erstellen einer Stack-Maschine
-- ⏳ Möglichkeit, weitere Aktionen interaktiv hinzuzufügen, und
-  halbautomatisierte Unterstützung für Parser- und Codeerzeugung
+- ✅ EBNF-Parser, rekursiver Top-Down-Parser (erste Version)  2008
+- ✅ Erstellt Parsertabelle zum Erstellen einer Stack-Maschine 2008
+- ✅ Erstellt Code aus Parsertabelle für den Rekursiven Abstieg 06/2026
+- ⏳ Möglichkeit, weitere Aktionen interaktiv hinzuzufügen, und  
+  halbautomatisierte Unterstützung für Parser- und Codeerzeugung  2027
 
 
 
@@ -130,11 +132,11 @@ Bootstrap hat erfolgreich übersetzt, muss aber noch optimiert werden.
 
 ### Phase 1
 
-- ✅ Aus Q9-Parsec-Ausgabe Lexer, Syntaxcheck erzeugen
-- ✅ IR-Code definieren und dokumentieren
-- ✅ Frontend erzeugt IR-Zwischencode
-- ✅ Backend für 68k aus Intermediate Code, OS-9-kompatibel
-- 🔄 Backend für ARM64 (Apple Silicon)
+- ✅ Aus Q9-Parsec-Ausgabe Lexer, Syntaxcheck erzeugen 08/2026
+- ✅ IR-Code definieren und dokumentieren 08/2026
+- ✅ Frontend erzeugt IR-Zwischencode  08/2026
+- ✅ Backend für 68k aus Intermediate Code, OS-9-kompatibel  08/2026
+- 🔄 Backend für ARM64 (Apple Silicon) 08/2026
 
 ### Phase 2
 
