@@ -84,9 +84,10 @@ Weitere Informationen:
 ## KI-unterstützte Entwicklung
 
 Ein erheblicher Teil des Codes in diesen Repositories ist mit
-KI-Unterstützung (Claude Code) entstanden. Das ist je Commit über den
-Vermerk `Co-Authored-By: Claude Sonnet 5` in der Commit-Historie
-nachvollziehbar.
+KI-Unterstützung (Claude Code und OpenAI Codex) entstanden. Mit Claude
+Code erstellte Commits tragen den Vermerk `Co-Authored-By: Claude
+Sonnet 5` in der Commit-Historie; Codex-unterstützte Commits sind nicht
+gesondert gekennzeichnet.
 
 ## Hinweis zu KI-/LLM-Dateien
 

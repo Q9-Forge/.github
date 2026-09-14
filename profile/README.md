@@ -82,8 +82,9 @@ More information:
 ## AI-assisted development
 
 A substantial part of the code in these repositories was written with
-AI assistance (Claude Code). This is visible per commit via the
-`Co-Authored-By: Claude Sonnet 5` trailer in the commit history.
+AI assistance (Claude Code and OpenAI Codex). Commits made with Claude
+Code carry a `Co-Authored-By: Claude Sonnet 5` trailer in the commit
+history; Codex-assisted commits are not separately marked.
 
 ## Note on AI/LLM files
 
