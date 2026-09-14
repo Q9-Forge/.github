@@ -52,7 +52,7 @@ stable releases.
 | Project | Status | Description |
 | --- | --- | --- |
 | [Q9-OS](https://github.com/Q9-Forge/Q9-OS) |  | Foundations and kernel development |
-| &nbsp;&nbsp;- [Q9-OS Kernel 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/68k) | 🟢 0.1 | Boots and runs |
+| &nbsp;&nbsp;- [Q9-OS Kernel 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/68k) | 🟡 0.1 | Boots and runs |
 | &nbsp;&nbsp;- [Q9-OS Kernel x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/x86) | 🔴 | Not started |
 | &nbsp;&nbsp;- [Q9-OS IOMAN 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/68k) | 🔴 | Not started |
 | &nbsp;&nbsp;- [Q9-OS IOMAN x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/x86) | 🔴 | Not started |
