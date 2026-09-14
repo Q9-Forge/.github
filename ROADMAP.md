@@ -21,14 +21,13 @@ storage. Modular kernel, IO system with the layers Manager – Driver –
 Descriptors. TCP stack.
 
 First target: Motorola 68K
-Possible next targets: Raspberry, x86 32-bit, ESP32
+Possible next targets: X86-32, ARM64, RISC-V
 
 ### Phase 1
 
-- 🔄 Kernel reverse engineering, disassembly — Dec 2026
+- 🔄 Kernel paper development — Dec 2026
 - ⏳ Kernel planning, which submodules we need — 2027
-- ⏳ Kernel: first translation of an existing kernel with original code — 2027
-- ⏳ Rewrite kernel in C — 2027
+- ⏳ Kernel: first translation in C — 2027
 
 ### Phase 2
 
@@ -40,14 +39,14 @@ Possible next targets: Raspberry, x86 32-bit, ESP32
 
 ### Phase 3
 
-- ⏳ Further targets (Raspberry, x86, ...) — 2030 and later
+- ⏳ Further targets (x86-32, ARM64, RISC-V ...) — 2030 and later :-)
 
 
 
 ## Q9-Flux – Emulator for Q9-OS (also runs other systems)
 
 For the Motorola 68K target system, runs on Mac (Apple Silicon), Linux,
-Windows, and later also WASM. System for hardware devices, freely
+Windows. System for hardware devices, freely
 configurable board, free memory mapping.
 
 ### Phase 1
@@ -137,27 +136,27 @@ First bootstrap compiled successfully, but still needs to be optimized.
 - ✅ Generate lexer, syntax check from Q9-Parsec output
 - ✅ Define and document IR code
 - ✅ Frontend produces IR intermediate code
-- ✅ Backend for 68k from intermediate code, OS-9-compatible
+- ✅ Backend for 68k from IR intermediate code
 - 🔄 Backend for ARM64 (Apple Silicon)
 
 ### Phase 2
 
-- ⏳ C preprocessor, ISO C89/C99/C11-compatible
-- ⏳ Assembler for 68k, OS-9 format, ROF format output
-- ⏳ Linker for ROF format, OS-9/Q9 module output
+- ✅ C preprocessor, ISO C89 -compatible
+- ✅ Assembler for 68k, ROF format output
+- ✅ Linker for ROF format, Q9 module output
 - ⏳ Further backends, x86 32-bit
 
 ### Phase 3
 
 - ⏳ QCC invocation manager, invokes QCC modules to compile — 2027
 - ⏳ Optimizations in the IR intermediate code — 2027
-- ⏳ Optimizations in the assembler code — 2027
+- ✅ Optimizations in the 68k assembler code — 2027
 
 ### Phase 4
 
 - ⏳ Further frontends: Rust, Go, Pascal, Oberon — 2029
-- ⏳ Interpreter for intermediate code — 2028
-- ⏳ Further backends, Raspberry
+- ✅ Interpreter for intermediate code — 2028
+- ⏳ Further backends, X86-32, ARM64, RISC-V
 
 
 
