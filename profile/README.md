@@ -8,36 +8,51 @@ German version: [README_de.md](README_de.md)
 
 ## What is Q9?
 
-Q9 is a new operating-system project with historical roots. It is inspired
-by Microware OS-9/68K and OS-9000, with the aim of creating a compatible,
-portable and modular system that can run historical OS-9 programs while also
-providing a foundation for new software.
+Q9 is a new operating system with historical roots. Back in the 1980s, I
+was a big fan of Microware OS-9/68K and later also OS-9000. As a student
+I worked a lot with these systems and was convinced they would catch on
+sooner or later. In hindsight, I was a bit too optimistic about that —
+most people today have probably never heard of OS-9.
 
-The first target is the Motorola 68000 family. The long-term goal is an open
-kernel with its own I/O system, I/O managers and support for additional
-architectures.
+In an age of Linux and many other free operating systems, I'd still like
+to bring the idea back to life. Q9 is meant to become a compatible,
+portable operating-system kernel that stays as close to OS-9 as possible,
+letting it run historical OS-9 programs while also making it possible to
+develop new ones. Later, Q9 is meant to be extended with modern features.
+
+The starting point — as with Microware — is the historical Motorola
+68000 processor family. The goal is a compatible, modular and portable
+kernel with its own I/O system and its own I/O managers. There's still
+quite a bit of work ahead until then.
 
 ## What is Q9-Forge?
 
-Q9-Forge brings together the projects required to develop and run Q9:
+Q9-Forge brings together the projects needed to develop, run and extend
+Q9:
 
-- [Q9-OS](https://github.com/Q9-Forge/Q9-OS) — operating-system kernel and system components.
-- [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) — emulator and hardware models.
-- [Q9-QCC](https://github.com/Q9-Forge/Q9-QCC) — compiler toolchain, IR and backends.
-- [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) — system, network and language utilities.
+- [Q9-OS](https://github.com/Q9-Forge/Q9-OS) — operating-system kernel
+  and OS foundations, plus the I/O system.
+- [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) — emulator and hardware
+  visualization for 68k, x86 and device components.
+- [Q9-QCC](https://github.com/Q9-Forge/Q9-QCC) — compiler toolchain with
+  parser generator, C frontend, IR intermediate code, backends and
+  interpreter.
+- [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) — system, network and
+  language utilities for Q9 and OS-9.
 
-The projects are maintained in separate repositories so that each toolchain
-or system component can evolve independently.
+The projects are split into independent repositories. Architecture-
+dependent code is kept separate within each project; shared sources live
+in their own areas.
 
 ## Project status
 
-Version numbers indicate the internal development state and are not stable
-releases.
+Version numbers indicate the internal development state and are not
+stable releases.
 
 | Project | Status | Description |
 | --- | --- | --- |
-| [Q9-OS](https://github.com/Q9-Forge/Q9-OS) |  | Kernel and system development |
-| &nbsp;&nbsp;- [Q9-OS Kernel 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/68k) | 🔴 0.1 | Kernel development started |
+| [Q9-OS](https://github.com/Q9-Forge/Q9-OS) |  | Foundations and kernel development |
+| &nbsp;&nbsp;- [Q9-OS Kernel 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/68k) | 🟡 0.1 | Kernel development started |
 | &nbsp;&nbsp;- [Q9-OS Kernel x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-KERNEL/x86) | 🔴 | Not started |
 | &nbsp;&nbsp;- [Q9-OS IOMAN 68k](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/68k) | 🔴 | Not started |
 | &nbsp;&nbsp;- [Q9-OS IOMAN x86](https://github.com/Q9-Forge/Q9-OS/tree/main/Q9-IOMAN/x86) | 🔴 | Not started |
@@ -52,11 +67,21 @@ releases.
 | &nbsp;&nbsp;- [Q9-QCC Run](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-RUN) | 🟢 0.1 | IR interpreter in development |
 | [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) | 🟢 0.1 | System, network and language utilities |
 
+These indicators are adjusted as development progresses and are mainly
+meant to give a quick overview of each project's maturity and focus.
+
+Q9-Forge is under active development. The current focus is on the Q9
+kernel, the 68k emulator, and rounding out the Q9-QCC toolchain.
+
+More information:
+
+- [Project conventions](../CONVENTIONS.md)
+- [Roadmap](../ROADMAP.md)
+- [Roadmap in German](../ROADMAP_de.md)
+
 ## Contributing
 
-Supporters and contributors are welcome. Questions, bug reports and proposed
-improvements can be opened as [Issues](https://github.com/Q9-Forge) or Pull
-Requests in the relevant repository.
-
-The project is under active development; status information and development
-versions are indicative and are not stable releases.
+Supporters and contributors are welcome. Questions, bug reports, ideas
+and proposed improvements can be filed as an
+[Issue](https://github.com/Q9-Forge/Q9-OS/issues). If you'd like to
+contribute code or documentation, feel free to open a Pull Request.
