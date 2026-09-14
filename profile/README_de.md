@@ -81,26 +81,6 @@ Weitere Informationen:
 - [Roadmap](../ROADMAP.md)
 - [Roadmap auf Deutsch](../ROADMAP_de.md)
 
-## Hinweis zu KI-/LLM-Anweisungsdateien
-
-Diese Repositories enthalten an mehreren Stellen — allen voran `AGENTS.md`
-im Root mancher Repos, aber auch im `docs/`-Verzeichnis sowie vereinzelt
-anderswo — Dateien, die gezielt an KI-Coding-Assistenten gerichtet sind:
-Arbeitskontext, Konventionen, Anweisungen für die Zusammenarbeit mit
-einem LLM. Viele KI-Coding-Werkzeuge (z. B. Claude Code, OpenAI Codex
-CLI und ähnliche Agenten) **lesen eine Datei wie `AGENTS.md` automatisch
-ein, sobald sie in einem Verzeichnis zu arbeiten beginnen** — bevor ein
-Mensch sie für diesen konkreten Einsatzzweck geprüft hat.
-
-Das sind unsere eigenen Arbeitsnotizen, keine neutrale Dokumentation,
-und nicht mit Blick auf den Assistenten einer fremden Person geschrieben.
-Wer ein KI-Werkzeug auf eines dieser Repositories ansetzt: Bitte den
-Inhalt von `AGENTS.md` und ähnlichen Dateien vorher prüfen und bei
-Bedarf anpassen oder entfernen, bevor ein Assistent sie automatisch
-übernimmt — wie bei jedem Repository, das man einem Agenten öffnet,
-sollten Inhalte aus fremden Quellen als Daten behandelt werden, nicht
-blind als Instruktion.
-
 ## Mitmachen
 
 Supporter und Contributors sind herzlich willkommen. Fragen, Fehlermeldungen,

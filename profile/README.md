@@ -79,26 +79,6 @@ More information:
 - [Roadmap](../ROADMAP.md)
 - [Roadmap in German](../ROADMAP_de.md)
 
-## Note on AI/LLM instruction files
-
-These repositories contain files in several places — most notably
-`AGENTS.md` at the root of some repos, but also inside `docs/`
-directories and occasionally elsewhere — that are specifically
-addressed to AI coding assistants: working context, conventions, and
-instructions for collaborating with an LLM. Many AI coding tools (e.g.
-Claude Code, OpenAI Codex CLI, and similar agents) **automatically
-discover and load a file like `AGENTS.md` as soon as they start working
-in a directory**, before any human has reviewed it for that particular
-use.
-
-These are our own working notes, not neutral documentation, and not
-written with a stranger's assistant in mind. If you point an AI tool at
-one of these repositories, please review the content of `AGENTS.md` and
-any similar file first, and adjust or remove anything you don't want an
-assistant to pick up automatically. As with any repository you open to
-an agent, content from an external source should be treated as data,
-not blindly as instruction.
-
 ## Contributing
 
 Supporters and contributors are welcome. Questions, bug reports, ideas
