@@ -21,26 +21,23 @@ mit Massenspeicher. Modularer Kernel, IO-System mit den Schichten Manager –
 Driver – Descriptoren. TCP-Stack.
 
 Erstes Target: Motorola 68K
-Mögliche nächste Targets: Raspberry, x86 32-Bit, ESP32
+Mögliche nächste Targets: x86-32-Bit, ARM64 (Raspberry), RISC-V
 
 ### Phase 1
 
-- 🔄 Kernel Reverse Engineering, Disassembly — Dez 2026
-- ⏳ Kernel-Planung, welche Teilmodule wir brauchen — 2027
-- ⏳ Kernel: erste Übersetzung eines vorhandenen Kernels mit Originalcode — 2027
-- ⏳ Kernel neu schreiben in C — 2027
+- ✅ Kernel-Planung, Infrastruktor, Modul splitting — 09/26
+- ✅ Kernel: erste Übersetzung in C, erstmals Lauffähig ohne alle Sys Calls - 09/26 
+- ⏳ Kernel complett in C — Q1 2027
+
 
 ### Phase 2
 
 - ⏳ Systemmodule bauen — 2027/28
-- ⏳ Manager bauen, untersuchen und planen — 2028
-- ⏳ Kernelsupport für CP/M-68k — 2028
-- ⏳ Kernelsupport für OS-9/6809 — 2029
-- ⏳ Kernelsupport für CP/M-80 — 2030 :-)
+- ⏳ alle Manager bauen, planen und umsetzen — 2028
 
 ### Phase 3
 
-- ⏳ Weitere Targets (Raspberry, x86, ...) — 2030 und später
+- ⏳ Weitere Targets (x86-32, ARM64, RISC-V, ...) — 2030 und später
 
 
 
@@ -56,10 +53,10 @@ konfigurierbar, freies Memory-Mapping.
 - ✅ Original-Bootimage kann verwendet werden, frei einstellbar
 - ✅ Ethernet-Support, 3 Modi: NAT, VMnet, Bridge
 - ✅ Telnet-Support in OS-9
-- 🔄 FTP-Support, Issue (FTP nutzt noch den alten TCP-Socket-Pfad)
-- 🔄 NFS-Support, Issue
-- 🔄 Samba-Support, Issue
-- ✅ Linux-Bash-Support V1.10.12
+- 🔄 ? FTP-Support, Issue (FTP nutzt noch den alten TCP-Socket-Pfad)
+- 🔄 ? NFS-Support, Issue
+- 🔄 ? Samba-Support, Issue
+- ✅ Linux-Bash-Support V1.10.12 08/26
 - Hardware-Simulationen:
   - ✅ CF-Kartenleser (CompactFlash)
     - ✅ Grundfunktionen
@@ -71,8 +68,8 @@ konfigurierbar, freies Memory-Mapping.
   - ✅ Timer-/Clock-Simulator (IRQ3)
   - ✅ Virtuelle Netzwerk-Terminal-Simulation (/x1–/x8)
   - ✅ Ethernet-Simulation (QUICC)
-  - 🔄 MC6845-Framebuffer-Simulation mit Remote-Verbindung (Q9 Frame) — Aug 2026
-    Gegenstück-Projekt Q9 Frame stellt den Framebuffer in einem Fenster dar (für Mac)
+  - 🔄 MC6845-Framebuffer-Simulation mit Remote-Verbindung (Q9 Frame) — Sep 2026
+  - ✅ Gegenstück-Projekt Q9 Frame stellt den Framebuffer in einem Fenster dar (für Mac)
 
 ### Phase 2
 
@@ -83,8 +80,6 @@ konfigurierbar, freies Memory-Mapping.
   - ⏳ Timer/Clock, virtuell, optimiert
 - ⏳ Board-Konfigurator: Zusammenstellung der Simulationen für ein Board — Q1 2027
 - ⏳ Neues Target-Hardware MC68000 — 2027
-- ⏳ Interner 6809-Emulator — 2027
-- ⏳ Interne CP/M-68k-Emulation — 2027
 - ⏳ Hardware-Simulation für verschiedene Boards (CB030, MC68000, Vinculum, weitere) — 2028
 
 ### Phase 3
@@ -143,21 +138,21 @@ Bootstrap hat erfolgreich übersetzt, muss aber noch optimiert werden.
 
 ### Phase 2
 
-- ⏳ C-Präprozessor, ISO-C89-/C99-/C11-kompatibel
-- ⏳ Assembler für 68k, OS-9-Format, Ausgabe ROF-Format
-- ⏳ Linker für ROF-Format, Ausgabe OS-9/Q9-Modul
-- ⏳ Weitere Backends, x86 32-Bit
+- ✅ C-Präprozessor, ISO-C89-/C99-/C11-kompatibel 09/26
+- ✅ Assembler für 68k, OS-9-Format, Ausgabe ROF-Format 09/26
+- ✅ Linker für ROF-Format, Ausgabe OS-9/Q9-Modul 09/26
+- ⏳ Weitere Backends, x86-32, ARM64, RISC-V
 
 ### Phase 3
 
-- ⏳ QCC-Aufrufmanager, ruft QCC-Module zum Kompilieren auf — 2027
+- ✅ QCC-Aufrufmanager, ruft QCC-Module zum Kompilieren auf 09/26
 - ⏳ Optimierungen im IR-Zwischencode — 2027
-- ⏳ Optimierungen im Assembler-Code — 2027
+- ✅ Optimierungen im Assembler-Code —  09/26
 
 ### Phase 4
 
-- ⏳ Weitere Frontends: Rust, Go, Pascal, Oberon — 2029
-- ⏳ Interpreter für Intermediate Code — 2028
+- ⏳ Weitere Frontends: Rust, Go, Modula2, Oberon — 2029
+- ✅ Interpreter für Intermediate Code — 09/26
 - ⏳ Weitere Backends, Raspberry
 
 
