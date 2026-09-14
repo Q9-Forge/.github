@@ -83,18 +83,23 @@ Weitere Informationen:
 
 ## Hinweis zu KI-/LLM-Anweisungsdateien
 
-Diese Repositories enthalten an mehreren Stellen — u. a. `AGENTS.md`, im
-`docs/`-Verzeichnis sowie vereinzelt anderswo — Dateien, die gezielt an
-KI-Coding-Assistenten gerichtet sind: Arbeitskontext, Konventionen,
-Anweisungen für die Zusammenarbeit mit einem LLM. Das sind unsere
-eigenen Arbeitsnotizen, keine neutrale Dokumentation, und sie werden von
-keiner KI automatisch und ungeprüft ausgeführt.
+Diese Repositories enthalten an mehreren Stellen — allen voran `AGENTS.md`
+im Root mancher Repos, aber auch im `docs/`-Verzeichnis sowie vereinzelt
+anderswo — Dateien, die gezielt an KI-Coding-Assistenten gerichtet sind:
+Arbeitskontext, Konventionen, Anweisungen für die Zusammenarbeit mit
+einem LLM. Viele KI-Coding-Werkzeuge (z. B. Claude Code, OpenAI Codex
+CLI und ähnliche Agenten) **lesen eine Datei wie `AGENTS.md` automatisch
+ein, sobald sie in einem Verzeichnis zu arbeiten beginnen** — bevor ein
+Mensch sie für diesen konkreten Einsatzzweck geprüft hat.
 
+Das sind unsere eigenen Arbeitsnotizen, keine neutrale Dokumentation,
+und nicht mit Blick auf den Assistenten einer fremden Person geschrieben.
 Wer ein KI-Werkzeug auf eines dieser Repositories ansetzt: Bitte den
-Inhalt solcher Dateien vor der Nutzung prüfen und bei Bedarf anpassen
-oder entfernen, bevor sich die KI danach richtet — wie bei jedem
-Repository, das man einem Agenten öffnet, sollten Inhalte aus fremden
-Quellen als Daten behandelt werden, nicht blind als Instruktion.
+Inhalt von `AGENTS.md` und ähnlichen Dateien vorher prüfen und bei
+Bedarf anpassen oder entfernen, bevor ein Assistent sie automatisch
+übernimmt — wie bei jedem Repository, das man einem Agenten öffnet,
+sollten Inhalte aus fremden Quellen als Daten behandelt werden, nicht
+blind als Instruktion.
 
 ## Mitmachen
 
