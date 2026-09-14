@@ -25,7 +25,6 @@ Q9-Forge brings together the projects required to develop and run Q9:
 - [Q9-Flux](https://github.com/Q9-Forge/Q9-Flux) — emulator and hardware models.
 - [Q9-QCC](https://github.com/Q9-Forge/Q9-QCC) — compiler toolchain, IR and backends.
 - [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) — system, network and language utilities.
-- [Q9-Port](https://github.com/Q9-Forge/Q9-Port) — reserved for future porting work.
 
 The projects are maintained in separate repositories so that each toolchain
 or system component can evolve independently.
@@ -52,7 +51,6 @@ releases.
 | &nbsp;&nbsp;- [Q9-QCC ARM64 backend](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-ARM64) | 🔴 0.1 | Early development |
 | &nbsp;&nbsp;- [Q9-QCC Run](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-RUN) | 🟢 0.1 | IR interpreter in development |
 | [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) | 🟢 0.1 | System, network and language utilities |
-| [Q9-Port](https://github.com/Q9-Forge/Q9-Port) |  | Reserved for future porting work |
 
 ## Contributing
 
