@@ -40,8 +40,6 @@ von Q9 benötigt werden:
   Parsergenerator, C-Frontend, IR-Zwischencode, Backends und Interpreter.
 - [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) — System-, Netzwerk- und
   Sprachwerkzeuge für Q9 und OS-9.
-- [Q9-Port](https://github.com/Q9-Forge/Q9-Port) — vorbereitetes Repository
-  für spätere Portierungsarbeiten, Treiber und Hardware-Deskriptoren.
 
 Die Projekte sind in eigenständige Repositories aufgeteilt. 
 Architekturabhängiger Code wird innerhalb der jeweiligen Projekte getrennt
@@ -69,7 +67,6 @@ keine stabilen Releases.
 | &nbsp;&nbsp;- [Q9-QCC Backend-ARM64](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-BACKEND-ARM64) | 🔴 0.1 | Frühe Entwicklung |
 | &nbsp;&nbsp;- [Q9-QCC Run](https://github.com/Q9-Forge/Q9-QCC/tree/main/Q9-RUN) | 🟢 0.1 | IR-Interpreter in Entwicklung |
 | [Q9-Tools](https://github.com/Q9-Forge/Q9-Tools) |  | System-, Netzwerk- und Sprachwerkzeuge |
-| [Q9-Port](https://github.com/Q9-Forge/Q9-Port) |  | Vorbereitet, noch nicht aktiviert |
 
 Die Angaben werden im Laufe der Entwicklung angepasst und sollen vor allem
 einen schnellen Überblick über Reifegrad und Schwerpunkt der Projekte geben.
