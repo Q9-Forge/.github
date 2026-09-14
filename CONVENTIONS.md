@@ -1,66 +1,67 @@
-# Q9 Forge – Projektstruktur-Konvention
+# Q9 Forge – Project Structure Conventions
 
-## Organisation vs. Repository
+*German version: [CONVENTIONS_de.md](CONVENTIONS_de.md)*
 
-Q9-Forge ist eine GitHub-Organisation (kein Repo selbst) und hält mehrere
-unabhängige Repos, je mit eigener, ungemischter Git-Historie:
+## Organization vs. repository
 
-- **Q9-Flux** — CB030/68030-Hardware-Emulator
-- **Q9-OS** — Port von echtem Microware OS-9/68K
-- **Q9-Parsec** — EBNF-Parser-/Scanner-Generator
-- **Q9-QCC** — QCC-Compiler (baut auf Q9-Parsec auf)
-- **Vinculum** — Hardware-Zielsystem (KiCad, Image); kein `Q9-`-Präfix, da
-  Hardware nicht denselben Namensdruck hat wie Software
+Q9-Forge is a GitHub organization (not a repo itself) and holds several
+independent repos, each with its own, unmixed git history:
 
-## Namenskonvention
+- **Q9-Flux** — CB030/68030 hardware emulator
+- **Q9-OS** — independent, OS-9/68K-compatible operating-system kernel
+- **Q9-Parsec** — EBNF parser/scanner generator
+- **Q9-QCC** — QCC compiler (built on Q9-Parsec)
+- **Vinculum** — hardware target system (KiCad, image); no `Q9-` prefix,
+  since hardware doesn't carry the same naming pressure as software
 
-`Q9-<Name>`, Bindestrich, erster Buchstabe groß (`Q9-Flux`, nicht `q9-flux`
-oder `Q9Flux`). Ausnahme: eigenständige Hardware-Projekte wie `Vinculum`
-brauchen den Präfix nicht.
+## Naming convention
 
-## Struktur innerhalb eines Repos
+`Q9-<Name>`, hyphenated, first letter capitalized (`Q9-Flux`, not
+`q9-flux` or `Q9Flux`). Exception: standalone hardware projects like
+`Vinculum` don't need the prefix.
 
-- `src/` — Quellcode.
-  - **1 Modul** → Dateien direkt in `src/`
-  - **>1 Modul** → je Modul ein Unterverzeichnis in `src/`
-  - Im Zweifel: flach bleiben. Ein Modulverzeichnis lässt sich später leicht
-    nachziehen; verwaiste leere Modulverzeichnisse stören mehr als spätes
-    Aufteilen.
-- `docs/` — Dokumentation. `README.md` im Repo-Root ist Pflicht.
-- `test/`/`tests/` — Tests, spiegelt `src/` (modulweise oder flach,
-  konsistent mit `src/`).
-- `tools/` — eigenständige Hilfsprogramme, nicht Teil des Hauptbuilds.
+## Structure within a repo
 
-Kein starres `include/`-Verzeichnis vorgeschrieben — bisher hat sich in der
-Praxis gezeigt, dass Header neben ihrer `.c`-Datei in `src/` liegen bleiben
-können, solange nichts repo-übergreifend eingebunden werden muss.
+- `src/` — source code.
+  - **1 module** → files directly in `src/`
+  - **>1 module** → one subdirectory per module in `src/`
+  - When in doubt: stay flat. A module directory can easily be added
+    later; orphaned empty module directories are more disruptive than
+    splitting things up later.
+- `docs/` — documentation. `README.md` at the repo root is mandatory.
+- `test/`/`tests/` — tests, mirroring `src/` (per module or flat,
+  consistent with `src/`).
+- `tools/` — standalone helper programs, not part of the main build.
 
-## Veraltete/aufgegebene Arbeit
+No rigid `include/` directory is mandated — in practice, headers can stay
+next to their `.c` file in `src/` as long as nothing needs to be included
+across repos.
 
-Wird nicht im entsprechenden Q9-Forge-Repo liegen gelassen (verwässert die
-Repo-Identität, siehe Q9-Flux' frühe "Mini-OS"-Phase). Stattdessen: mit
-vollständiger Git-Historie in ein Repo unter dem persönlichen Account
-`foellmy51` extrahieren, Präfix `Q9RESUME-` (z.B. `Q9RESUME-Kernel`,
+## Obsolete/abandoned work
+
+Is not left lying around in the corresponding Q9-Forge repo (it dilutes
+the repo's identity, see Q9-Flux's early "Mini-OS" phase). Instead:
+extract it with full git history into a repo under the personal account
+`foellmy51`, prefix `Q9RESUME-` (e.g. `Q9RESUME-Kernel`,
 `Q9RESUME-Edit`).
 
-## Cross-Repo-Abhängigkeiten
+## Cross-repo dependencies
 
-Wenn ein Repo auf Werkzeuge/Code eines anderen Q9-Forge-Repos angewiesen ist
-(z.B. Q9-QCC braucht Q9-Parsecs `ebnf`-Tool, um seinen eigenen Parser zu
-erzeugen), wird das im README des abhängigen Repos dokumentiert
-(Checkout-Anleitung, Build-Reihenfolge) — kein automatisches Git-Submodule
-ohne expliziten Anlass.
+When a repo depends on tools/code from another Q9-Forge repo (e.g.
+Q9-QCC needs Q9-Parsec's `ebnf` tool to generate its own parser), this is
+documented in the dependent repo's README (checkout instructions, build
+order) — no automatic git submodule without an explicit reason.
 
-## Dokumentationssprache
+## Documentation language
 
-Original-Dokumentation/`.md`-Dateien werden auf **Englisch** verfasst.
-Dazu jeweils eine deutsche Übersetzung mit Suffix `_de` im Dateinamen
-(z.B. `ARBEITSPLAN.md` engl. Original + `ARBEITSPLAN_de.md`). Gilt
-repo-übergreifend für alle Q9-Forge-Projekte, abweichend von der
-pauschalen "Deutsch"-Regel in `C:\projects\PROJECT.md`.
+Original documentation/`.md` files are written in **English**. Each gets
+a German translation with the `_de` suffix in the filename (e.g.
+`ARBEITSPLAN.md` English original + `ARBEITSPLAN_de.md`). This applies
+across all Q9-Forge projects, as an exception to the blanket "German"
+rule in `C:\projects\PROJECT.md`.
 
 ## Issues
 
-Repo-spezifische Bugs/Aufgaben als Issue im jeweiligen Repo. Cross-Repo-
-Themen (Roadmap-übergreifend) hier in `.github` oder als Issue in diesem
-Repo.
+Repo-specific bugs/tasks as an issue in the respective repo. Cross-repo
+topics (spanning the roadmap) go here in `.github`, or as an issue in
+this repo.

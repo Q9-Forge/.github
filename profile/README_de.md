@@ -77,7 +77,7 @@ Q9-QCC-Werkzeugkette.
 
 Weitere Informationen:
 
-- [Projektkonventionen](../CONVENTIONS.md)
+- [Projektkonventionen](../CONVENTIONS_de.md)
 - [Roadmap](../ROADMAP.md)
 - [Roadmap auf Deutsch](../ROADMAP_de.md)
 

@@ -21,57 +21,55 @@ storage. Modular kernel, IO system with the layers Manager – Driver –
 Descriptors. TCP stack.
 
 First target: Motorola 68K
-Possible next targets: X86-32, ARM64, RISC-V
+Possible next targets: x86 32-bit, ARM64 (Raspberry), RISC-V
 
 ### Phase 1
 
-- 🔄 Kernel paper development — Dec 2026
-- ⏳ Kernel planning, which submodules we need — 2027
-- ⏳ Kernel: first translation in C — 2027
+- ✅ Kernel planning, infrastructure, module splitting — 07/26
+- ✅ Kernel: first translation to C, runnable for the first time, system calls still missing — 09/26
+- ⏳ Kernel complete in C — Q4 2026
+
 
 ### Phase 2
 
 - ⏳ Build system modules — 2027/28
-- ⏳ Build, research and plan managers — 2028
-- ⏳ Kernel support for CP/M-68k — 2028
-- ⏳ Kernel support for OS-9/6809 — 2029
-- ⏳ Kernel support for CP/M-80 — 2030 :-)
+- ⏳ Build, research and implement all managers — 2028
 
 ### Phase 3
 
-- ⏳ Further targets (x86-32, ARM64, RISC-V ...) — 2030 and later :-)
+- ⏳ Further targets (x86 32-bit, ARM64, RISC-V, ...) — 2030 and later
 
 
 
 ## Q9-Flux – Emulator for Q9-OS (also runs other systems)
 
 For the Motorola 68K target system, runs on Mac (Apple Silicon), Linux,
-Windows. System for hardware devices, freely
+Windows and later also WASM. System for hardware devices, freely
 configurable board, free memory mapping.
 
 ### Phase 1
 
-- ✅ Emulator for Motorola 68K (Musashi base), runs on Mac/Linux/Windows
-- ✅ Original boot image can be used, freely configurable
-- ✅ Ethernet support, 3 modes: NAT, VMnet, Bridge
-- ✅ Telnet support in OS-9
-- 🔄 FTP support, issue (FTP still uses the old TCP socket path)
-- 🔄 NFS support, issue
-- 🔄 Samba support, issue
-- ✅ Linux Bash support V1.10.12
+- ✅ Emulator for Motorola 68K (Musashi base), runs on Mac/Linux/Windows — 06/26
+- ✅ Original OS-9 boot image can be used, freely configurable — 06/26
+- ✅ Ethernet support, 3 modes: NAT, VMnet, Bridge — 07/26
+- ✅ Telnet support in OS-9 — 07/26
+- 🔄 ? FTP support, issue (FTP still uses the old TCP socket path)
+- 🔄 ? NFS support, issue
+- 🔄 ? Samba support, issue
+- ✅ Linux Bash support V1.10.12 — 07/26
 - Hardware simulations:
-  - ✅ CF card reader (CompactFlash)
+  - ✅ CF card reader (CompactFlash) — 03/24
     - ✅ Basic functions
-    - ✅ Partition support via MBR record
+    - ✅ Partition support via MBR record — 07/26
     - 🔄 RBF/PCF support — Nov 2026
     - 🔄 Master/slave support — Oct 2026
-  - ✅ UART simulator (68681 DUART)
-  - ✅ RTC simulator (RTC72421)
-  - ✅ Timer/clock simulator (IRQ3)
-  - ✅ Virtual network terminal simulation (/x1–/x8)
-  - ✅ Ethernet simulation (QUICC)
-  - 🔄 MC6845 framebuffer simulation with remote connection (Q9 Frame) — Aug 2026
-    Companion project Q9 Frame displays the framebuffer in a window (for Mac)
+  - ✅ UART simulator (68681 DUART) — Q1/24
+  - ✅ RTC simulator (RTC72421) — Q1/24
+  - ✅ Timer/clock simulator (IRQ3) — Q1/24
+  - ✅ Virtual network terminal simulation (/x1–/x8) — 07/26
+  - ✅ Ethernet simulation (QUICC) — 07/26
+  - 🔄 MC6845 framebuffer simulation with remote connection (Q9 Frame) — 08/2026
+  - ✅ Companion project Q9 Frame displays the framebuffer in a window (for Mac) — 08/26
 
 ### Phase 2
 
@@ -82,8 +80,6 @@ configurable board, free memory mapping.
   - ⏳ Timer/clock, virtual, optimized
 - ⏳ Board configurator: assembling simulations for a board — Q1 2027
 - ⏳ New target hardware MC68000 — 2027
-- ⏳ Internal 6809 emulator — 2027
-- ⏳ Internal CP/M-68k emulation — 2027
 - ⏳ Hardware simulation for various boards (CB030, MC68000, Vinculum, more) — 2028
 
 ### Phase 3
@@ -95,12 +91,13 @@ configurable board, free memory mapping.
 
 ## Q9 Frame – Program for displaying the Q9-Flux framebuffer over the network
 
-- ✅ Transmission: video modes, reg info (6845), CLUT data, framebuffer (dirty area)
-- ✅ Full support for the MC6845 register model, dynamic resolution, switchable on the run
-- ✅ Video modes and DAC models, from monochrome 1-bit up to 24-bit full-color mode, switchable on the run
-- ✅ UDP HELLO protocol for automatically finding the server
-- ✅ Screenshot
-- ⏳ Host service manager: shared, non-blocking service framework for the terminal and Q9-Frame TCP service, incl. update frequency, send queues, and client lifecycle
+- ✅ Transmission: video modes, reg info (6845), CLUT data, framebuffer (dirty area) — 08/26
+- ✅ Full support for the MC6845 register model, dynamic resolution, switchable on the run — 08/26
+- ✅ Video modes and DAC models, from monochrome 1-bit up to 24-bit full-color mode, switchable on the run — 08/26
+- ✅ UDP HELLO protocol for automatically finding the server — 08/26
+- ✅ Screenshot — 08/26
+- ⏳ Host service manager: shared, non-blocking service framework for the terminal and Q9-Frame TCP service,
+      incl. update frequency, send queues, and client lifecycle — 2027
 - ⏳ Multiple clients at once
 - ⏳ Optional UDP transport
 - ⏳ Mouse and keyboard back-channel (cursor and mouse pointer)
@@ -117,10 +114,11 @@ Parser generator. Produces C-code templates for recursive descent. Takes
 an EBNF language definition as input. Produces templates for building
 parsers and code generation. Q9-QCC also uses such a template.
 
-- ✅ EBNF parser, recursive top-down parser (first version)
-- ✅ Produces a parser table for building a stack machine
-- ⏳ Ability to interactively add further actions, and semi-automated
-  support for parser and code generation
+- ✅ EBNF parser, recursive top-down parser (first version) — 2008
+- ✅ Produces a parser table for building a stack machine — 2008
+- ✅ Produces code for recursive descent from the parser table — 06/2026
+- ⏳ Ability to interactively add further actions, and
+  semi-automated support for parser and code generation — 2027
 
 
 
@@ -133,30 +131,30 @@ First bootstrap compiled successfully, but still needs to be optimized.
 
 ### Phase 1
 
-- ✅ Generate lexer, syntax check from Q9-Parsec output
-- ✅ Define and document IR code
-- ✅ Frontend produces IR intermediate code
-- ✅ Backend for 68k from IR intermediate code
-- 🔄 Backend for ARM64 (Apple Silicon)
+- ✅ Generate lexer, syntax check from Q9-Parsec output — 08/2026
+- ✅ Define and document IR code — 08/2026
+- ✅ Frontend produces IR intermediate code — 08/2026
+- ✅ Backend for 68k from intermediate code, OS-9-compatible — 08/2026
+- 🔄 Backend for ARM64 (Apple Silicon) — 08/2026
 
 ### Phase 2
 
-- ✅ C preprocessor, ISO C89 -compatible
-- ✅ Assembler for 68k, ROF format output
-- ✅ Linker for ROF format, Q9 module output
-- ⏳ Further backends, x86 32-bit
+- ✅ C preprocessor, ISO C89/C99/C11-compatible — 09/26
+- ✅ Assembler for 68k, OS-9 format, ROF format output — 09/26
+- ✅ Linker for ROF format, OS-9/Q9 module output — 09/26
+- ⏳ Further backends, x86 32-bit, ARM64, RISC-V
 
 ### Phase 3
 
-- ⏳ QCC invocation manager, invokes QCC modules to compile — 2027
+- ✅ QCC invocation manager, invokes QCC modules to compile — 09/26
 - ⏳ Optimizations in the IR intermediate code — 2027
-- ✅ Optimizations in the 68k assembler code — 2027
+- ✅ Optimizations in the assembler code — 09/26
 
 ### Phase 4
 
-- ⏳ Further frontends: Rust, Go, Pascal, Oberon — 2029
-- ✅ Interpreter for intermediate code — 2028
-- ⏳ Further backends, X86-32, ARM64, RISC-V
+- ⏳ Further frontends: Rust, Go, Modula-2, Oberon — 2029
+- ✅ Interpreter for intermediate code — 09/26
+- ⏳ Further backends, Raspberry
 
 
 
