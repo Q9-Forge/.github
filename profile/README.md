@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300" height="300" alt="Q9-Forge" src="https://github.com/user-attachments/assets/0f469c58-eebb-429b-91bd-9fc9ef6df503" />
+  <img width="200" height="200" alt="Q9-Forge" src="https://github.com/user-attachments/assets/0f469c58-eebb-429b-91bd-9fc9ef6df503" />
 </p>
 
 # Q9-Forge
